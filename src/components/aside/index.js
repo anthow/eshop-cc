@@ -64,7 +64,7 @@ Bonjour
           Recherche pour: <strong>'{searchTerm}'</strong>
         </h3>
       )}
-      {!!filteredProducts.length && <h4>{filteredProducts.length} products</h4>}
+      {!!filteredProducts.length && <p>{filteredProducts.length} ShopifyProductFields</p>}
         <Filters />
         {!filteredProducts.length && (
           <div>

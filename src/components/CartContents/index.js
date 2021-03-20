@@ -1,6 +1,6 @@
 import React from 'react';
 import CartContext from 'context/CartContext';
-import { CartItem, CartHeader, CartFooter, Footer } from './styles';
+import { CartItem, CartHeader, CartFooter } from './styles';
 import { QuantityAdjuster } from '../QuantityAdjuster';
 import { RemoveLineItem } from '../RemoveLineItem';
 import { Button } from '../Button';
@@ -15,13 +15,13 @@ export function CartContents() {
 
   return (
     <section>
-      <h1>Your cart</h1>
+      <h1>votre panier</h1>
       {!!checkout?.lineItems && (
         <CartHeader>
-          <div>Product</div>
-          <div>Unit price</div>
-          <div>Quantity</div>
-          <div>Amount</div>
+          <div>produits</div>
+          <div>prix à l'unité</div>
+          <div>quantité</div>
+          <div>total</div>
         </CartHeader>
       )}
       {checkout?.lineItems?.map(item => (
@@ -32,11 +32,11 @@ export function CartContents() {
               {item.variant.title === 'Default Title' ? '' : item.variant.title}
             </div>
           </div>
-          <div>£{item.variant.price}</div>
+          <div>{item.variant.price} €</div>
           <div>
             <QuantityAdjuster item={item} onAdjust={handleAdjustQuantity} />
           </div>
-          <div>£{(item.quantity * item.variant.price).toFixed(2)}</div>
+          <div>{(item.quantity * item.variant.price).toFixed(2)}€</div>
           <div>
             <RemoveLineItem lineItemId={item.id} />
           </div>
@@ -48,14 +48,13 @@ export function CartContents() {
             <strong>Total:</strong>
           </div>
           <div>
-            <span>£{checkout?.totalPrice}</span>
+            <span>{checkout?.totalPrice}€</span>
           </div>
         </CartFooter>
       )}
-      {!checkout?.lineItems && <h4>You cart is empty.</h4>}
-      <Footer>
+      {!checkout?.lineItems && <h4>votre panier est vide</h4>}
         <div>
-          <Button onClick={() => navigate(-1)}>Continue shopping</Button>
+          <Button onClick={() => navigate(-1)}>Continuer les achats</Button>
         </div>
         <div>
           {!!checkout?.webUrl && (
@@ -64,11 +63,10 @@ export function CartContents() {
                 window.location.href = checkout.webUrl;
               }}
             >
-              Checkout
+              Paiement
             </Button>
           )}
         </div>
-      </Footer>
     </section>
   );
 }

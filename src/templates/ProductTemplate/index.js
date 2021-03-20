@@ -60,7 +60,7 @@ export default function ProductTemplate(props) {
         title={props.data.shopifyProduct.title}
       />
       <div className="flex flex-col md:flex-row content-center m-auto w-2/3" >
-      <Button onClick={() => navigate(-1)}>Back to products</Button>
+      <Button onClick={() => navigate(-1)}>revenir aux produits</Button>
       <Grid>
         <div>
           <h1>{props.data.shopifyProduct.title}</h1>

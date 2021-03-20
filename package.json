@@ -1,0 +1,68 @@
+{
+  "name": "gatsby-shopify-course",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby & Shopify.",
+  "version": "0.1.0",
+  "author": "Tom Phillips <info@tomphill.co.uk>",
+  "dependencies": {
+    "@babel/core": "^7.13.10",
+    "@fontsource/dancing-script": "^4.2.2",
+    "@fontsource/roboto": "^4.2.2",
+    "axios": "^0.21.1",
+    "babel-plugin-styled-components": "^1.12.0",
+    "core-js": "^2.6.12",
+    "faunadb": "^4.1.1",
+    "gatsby": "^3.1.0",
+    "gatsby-background-image": "^1.5.0",
+    "gatsby-image": "^3.1.0",
+    "gatsby-optional-chaining": "^1.0.1",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-manifest": "^3.1.0",
+    "gatsby-plugin-offline": "^4.1.0",
+    "gatsby-plugin-react-helmet": "^4.1.0",
+    "gatsby-plugin-remove-fingerprints": "0.0.2",
+    "gatsby-plugin-sharp": "^3.1.0",
+    "gatsby-plugin-styled-components": "^4.1.0",
+    "gatsby-source-filesystem": "^3.1.0",
+    "gatsby-source-shopify": "^4.1.0",
+    "gatsby-transformer-sharp": "^3.1.0",
+    "netlify-lambda": "^2.0.3",
+    "prop-types": "^15.7.2",
+    "query-string": "^7.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
+    "shopify-buy": "^2.11.0",
+    "shopify-verify-webhook": "^1.0.1",
+    "styled-components": "^5.2.1",
+    "styled-reset": "^4.3.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "gatsby-plugin-postcss": "^4.1.0",
+    "postcss": "^8.2.8",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.0.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomphill/gatsby-shopify-course"
+  },
+  "bugs": {
+    "url": "https://github.com/tomphill/gatsby-shopify-course/issues"
+  }
+}

@@ -1,0 +1,148 @@
+img.produit-image{
+  display:block;
+  width:250px;
+  height: 250px;
+}
+
+
+
+
+body{
+    font-family: "roboto";
+    color:#707070;
+  }
+  
+  .site{
+    min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  header, footer{
+      padding: 1rem;
+    background-color: #82B657;
+  }
+  
+  .concept-boutique{
+  background-color:#EEE4E4;
+  border-top: solid 7px #EDB720;
+  }
+  
+  .concept-atelier{
+    background-color:#E0D7D7;
+    border-top: solid 7px #168992;
+  
+  }
+  main{
+    flex: 1;
+  }
+  
+  button.boutique{
+    background-color:#EDB720;
+    width: 100px;
+  }
+  button.atelier{
+    background-color:#168992;
+    width: 100px;
+  }
+  
+  button.valeur{
+    background-color:#82B657;
+    width: 120px;
+  }
+  
+  .product-list {
+      display: grid;
+      grid-gap: theme('spacing.20')
+    }
+    
+    .product-category {
+      display: grid;
+      grid-gap: theme('spacing.20')
+    }
+  
+  h2, h3{
+    font-family: "DancingScript";
+    color:#4A0D17;
+  }
+  
+  
+  img.valeur{
+    width:150px;
+    height:150px;
+  }
+    
+  
+    @screen sm {
+      .product-list {
+        grid-template-columns: 2fr 2fr;
+      }
+      
+    }
+    
+    @screen lg {
+      .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+     
+    }
+    
+    .markdown {
+      @apply text-gray-900 leading-normal break-words;
+    }
+    
+    .markdown > * + * {
+      @apply mt-4;
+    }
+    
+    .markdown strong {
+      @apply font-semibold;
+    }
+    
+    .markdown a {
+      @apply text-blue-600 font-semibold;
+    }
+    
+    .markdown strong a {
+      @apply font-bold;
+    }
+    
+    .markdown h1 {
+      @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2;
+    }
+    
+    .markdown h2 {
+      @apply leading-tight border-b text-2xl font-semibold mb-4 mt-6 pb-2;
+    }
+    
+    .markdown h3 {
+      @apply leading-snug text-lg font-semibold mb-4 mt-6;
+    }
+    
+    .markdown h4 {
+      @apply leading-none text-base font-semibold mb-4 mt-6;
+    }
+    
+    .markdown h5 {
+      @apply leading-tight text-sm font-semibold mb-4 mt-6;
+    }
+    
+    .markdown h6 {
+      @apply leading-tight text-sm font-semibold text-gray-600 mb-4 mt-6;
+    }
+    
+    .markdown blockquote {
+      @apply text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-600;
+    }
+    
+    .btn {
+      @apply font-bold py-2 px-4 rounded;
+    }
+    
+    .btn-green {
+      @apply bg-green-600 text-white;
+    }
+    
+    .btn-green:hover {
+      @apply bg-green-800;
+    }

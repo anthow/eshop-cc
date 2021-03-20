@@ -66,8 +66,8 @@ export default function AllProducts() {
 <Aside />
 
         {!!filteredProducts.length && (
-          <div>
-            <ProductsGrid products={filteredProducts} />
+  <div className="product-list flex-grow">
+  <ProductsGrid products={filteredProducts} />
           </div>
         )}
       </section>

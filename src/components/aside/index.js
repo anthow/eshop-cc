@@ -57,14 +57,14 @@ export function Aside(){
 
     return( 
         <aside className='list-product flex p-2 text-center align-middle md:flex-col content-center space-x-4 px-8  border-r-0 md:border-r-2 '>
-Bonjour
+
 <Search />
 {!!searchTerm && !!filteredProducts.length && (
         <h3>
           Recherche pour: <strong>'{searchTerm}'</strong>
         </h3>
       )}
-      {!!filteredProducts.length && <p>{filteredProducts.length} ShopifyProductFields</p>}
+      {!!filteredProducts.length && <p>{filteredProducts.length} produits</p>}
         <Filters />
         {!filteredProducts.length && (
           <div>

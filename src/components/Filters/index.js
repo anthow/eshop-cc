@@ -8,7 +8,7 @@ export function Filters() {
 
   return (
     <FiltersWrapper>
-      <strong>Categories</strong>
+      <div className=' title-categorie font-bold text-center mb-6'>types de produits</div>
       {collections.map(collection => (
         <CategoryFilterItem
           title={collection.title}

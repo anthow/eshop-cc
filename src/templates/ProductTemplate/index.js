@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/no-onchange */
 import React from 'react';
 import { graphql } from 'gatsby';
+import {LayoutBoutique} from 'components/Layout/LayoutBoutique'
 import {
-  Layout,
+
   ImageGallery,
   ProductQuantityAdder,
   Button,
@@ -54,36 +55,48 @@ export default function ProductTemplate(props) {
   };
 
   return (
-    <Layout>
+    <LayoutBoutique>
       <SEO
         description={props.data.shopifyProduct.description}
         title={props.data.shopifyProduct.title}
       />
-      <div className="flex flex-col md:flex-row content-center m-auto w-2/3" >
-      <Button onClick={() => navigate(-1)}>revenir aux produits</Button>
-      <Grid>
-        <div>
-          <h1>{props.data.shopifyProduct.title}</h1>
-          <p>{props.data.shopifyProduct.description}</p>
+      <div className="flex flex-col md:flex-row content-center m-auto w-2/3 mt-4" >
+      <div>
+          <ImageGallery
+            selectedVariantImageId={selectedVariant?.image.id}
+            images={props.data.shopifyProduct.images}
+            
+            
+          />
+        </div>        <div className="mt-4 md:mt-0 md:w-2/3 md:mx-8"> 
+        <button onClick={() => navigate(-1)}>revenir aux produits</button>
+          <h1 className="title-article text-4xl font-bold" >{props.data.shopifyProduct.title}</h1>
+          <p>matière</p>
           {product?.availableForSale && !!selectedVariant && (
             <>
               {product?.variants.length > 1 && (
-                <SelectWrapper>
+                
+                  <div className=" flex flex-col  mt-0 ">
+                  <Price >{selectedVariant.price} €</Price> 
+                  <p className="mb-3 title-article font-bold ">options</p>
+                  <div className=" flex flex-row">
                   <select
                     value={selectedVariant.id}
                     onChange={handleVariantChange}
                   >
                     {product?.variants.map(v => (
                       <option key={v.id} value={v.id}>
+                        {v.selectedOptions.name}
                         {v.title}
                       </option>
                     ))}
                   </select>
-                </SelectWrapper>
+                  </div>
+                  </div>
+                
               )}
               {!!selectedVariant && (
                 <>
-                  <Price>{selectedVariant.price} €</Price>
                   <ProductQuantityAdder
                     available={selectedVariant.available}
                     variantId={selectedVariant.id}
@@ -93,16 +106,13 @@ export default function ProductTemplate(props) {
             </>
           )}
         </div>
-        <div>
-          <ImageGallery
-            selectedVariantImageId={selectedVariant?.image.id}
-            images={props.data.shopifyProduct.images}
-            
-            
-          />
-        </div>
-      </Grid>
+       
       </div>
-    </Layout>
+      <div className=" markdown mt-4 w-2/3  m-auto border-2t p-8"
+      >
+                <h2>Description du produit</h2>
+      <p>{props.data.shopifyProduct.description}</p>
+</div>
+    </LayoutBoutique>
   );
 }

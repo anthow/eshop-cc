@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '../Button';
 import { Input } from '../Input';
 import { ProductQuantityAdderWrapper } from './styles';
 import CartContext from 'context/CartContext';
@@ -18,7 +17,7 @@ export function ProductQuantityAdder({ variantId, available }) {
   };
 
   return (
-    <ProductQuantityAdderWrapper>
+    <>
       <strong>Quantité</strong>
       <form onSubmit={handleSubmit}>
         <Input
@@ -29,10 +28,11 @@ export function ProductQuantityAdder({ variantId, available }) {
           value={quantity}
           onChange={handleQuantityChange}
         />
-        <Button type="submit" disabled={!available} fullWidth>
+        <button type="submit" className="  block mt-5 p-2  w-auto buy-boutique whitespace-nowrap rounded-xl text-white "
+ disabled={!available} fullWidth>
           Ajouter au panier
-        </Button>
+        </button>
       </form>
-    </ProductQuantityAdderWrapper>
+      </>
   );
 }

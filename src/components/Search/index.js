@@ -1,7 +1,5 @@
 import React from 'react';
 import { Input } from '../Input';
-import { Button } from '../Button';
-import { FaSearch } from 'react-icons/fa';
 import { SearchForm } from './styles';
 import { navigate, useLocation } from '@reach/router';
 import queryString from 'query-string';
@@ -26,15 +24,17 @@ export function Search() {
   };
 
   return (
-    <SearchForm onSubmit={handleSubmit}>
+    <div className=" search-box flex flex-col search w-11/12 pl-2 pr-5  py-8 rounded-r-full box-content ">
+    <SearchForm  onSubmit={handleSubmit}>
       <Input
         value={searchTerm}
         onChange={e => setSearchTerm(e.currentTarget.value)}
-        placeholder="Search"
+        className="search-input"
       />
-      <Button>
-        <FaSearch />
-      </Button>
+      <button class="search text-white p-2 mt-2 font-bold rounded-full">
+        rechercher
+      </button>
     </SearchForm>
+    </div>
   );
 }

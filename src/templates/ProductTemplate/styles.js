@@ -28,7 +28,7 @@ export const SelectWrapper = styled.div`
 `;
 
 export const Price = styled.div`
-  margin: 40px 0;
+  margin: 20px 0;
   font-weight: bold;
   font-size: 30px;
 `;

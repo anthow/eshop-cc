@@ -56,15 +56,17 @@ export function Aside(){
 
 
     return( 
-        <aside className='list-product flex p-2 text-center align-middle md:flex-col content-center space-x-4 px-8  border-r-0 md:border-r-2 '>
-
+        <aside className='list-product flex  text-left  md:flex-col content-center  pr-4 '>
+          <img className='w-4/6 mx-auto mb-5 mt-3 ' alt="accueil" src="logo-boutique.svg"/>
+<div className="mb-2">
 <Search />
+</div>
+<div className="pl-2">
 {!!searchTerm && !!filteredProducts.length && (
-        <h3>
+        <p>
           Recherche pour: <strong>'{searchTerm}'</strong>
-        </h3>
+        </p>
       )}
-      {!!filteredProducts.length && <p>{filteredProducts.length} produits</p>}
         <Filters />
         {!filteredProducts.length && (
           <div>
@@ -76,18 +78,7 @@ export function Aside(){
            
           </div>
         )}
+        </div>
 </aside>
     );
 }
-
-/*
-
-/{!!searchTerm && !!filteredProducts.length && (
-        <h3>
-          Search term: <strong>'{searchTerm}'</strong>
-        </h3>
-      )}
-      {!!filteredProducts.length && <h4>{filteredProducts.length} products</h4>}
-<Filters />
-
-*/

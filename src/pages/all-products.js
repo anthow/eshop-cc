@@ -1,5 +1,6 @@
 import React from 'react';
-import { Layout, Filters,  ProductsGrid, SEO } from 'components';
+import {  ProductsGrid, SEO } from 'components';
+import {LayoutBoutique} from 'components/Layout/LayoutBoutique'
 import { Aside } from 'components/aside'
 import ProductContext from 'context/ProductContext';
 import styled from 'styled-components';
@@ -56,7 +57,7 @@ export default function AllProducts() {
     .filter(filterByCategory)
     .filter(filterBySearchTerm);
   return (
-    <Layout>
+    <LayoutBoutique>
       <SEO
         description="The MadHatter store all products"
         title="All products"
@@ -66,11 +67,11 @@ export default function AllProducts() {
 <Aside />
 
         {!!filteredProducts.length && (
-  <div className="product-list flex-grow">
+  <div className="product-list flex-grow py-10">
   <ProductsGrid products={filteredProducts} />
           </div>
         )}
       </section>
-    </Layout>
+    </LayoutBoutique>
   );
 }

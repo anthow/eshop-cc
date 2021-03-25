@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
-//import { HeaderWrapper } from './styles';
-import { Cart } from '../Cart';
-import { Search } from '../Search';
+import { Cart } from '../../Cart';
 import { Link } from 'gatsby'
 
-export function Header({ siteTitle }) {
+export function HeaderBoutique({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false)
   return (
-    <header className=" text-white">
+    <header className=" headerboutique text-white">
       <Helmet>
         <title> Coccinelles et compagnies</title>
       </Helmet>

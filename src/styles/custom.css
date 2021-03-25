@@ -4,9 +4,32 @@ img.produit-image{
   height: 250px;
 }
 
+button.search{
+  background-color:#A91F1F;
+}
+
+
+.search{
+  background-color: #EEE4E4;
+}
+.search-input{
+  height:30px !important;
+}
+
+aside{
+  
+box-shadow: 0px 0 5px -2px #888;
+min-height: 100vh;}
+
+
+.title-categorie,.title-article{
+  color:#4A0D17;
+}
 
 
 
+
+/*-----------------------------------------------------------------------------------*/
 body{
     font-family: "roboto";
     color:#707070;
@@ -23,6 +46,13 @@ body{
     background-color: #82B657;
   }
   
+  header.headerboutique, footer.FooterBoutique,.buy-boutique
+  {
+    background-color:#EDB720 !important;
+  }
+
+
+
   .concept-boutique{
   background-color:#EEE4E4;
   border-top: solid 7px #EDB720;
@@ -35,6 +65,7 @@ body{
   }
   main{
     flex: 1;
+    width:100%;
   }
   
   button.boutique{

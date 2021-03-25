@@ -1,20 +1,20 @@
 import { fromJSON } from 'postcss';
 import React from 'react';
-import { Header } from '../Header';
-import { Footer } from '../footer';
+import { HeaderBoutique } from '../../Header/HeaderBoutique';
+import { FooterBoutique } from '../../footer/footerBoutique';
 import "@fontsource/roboto"
 import "@fontsource/dancing-script"
-const Layout = ({ children }) => {
+const LayoutBoutique = ({ children }) => {
   return (
     <>
           <div className="site min-h-screen flex flex-col ">
 
-      <Header />
+      <HeaderBoutique />
         <main className>{children}</main>
-        <Footer />
+        <FooterBoutique />
         </div>
     </>
   );
 };
 
-export { Layout };
+export { LayoutBoutique };

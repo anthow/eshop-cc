@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CheckboxWrapper = styled.div`
   height: 20px;
   width: 20px;
-  border: 1px solid black;
+  border: 1px solid #240707;
   border-radius: 4px;
   cursor: pointer;
   display: flex;

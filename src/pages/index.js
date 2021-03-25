@@ -12,8 +12,8 @@ const IndexPage = () => {
 
   return (
 <Layout>
-        <main className="max-w-screen-2xl">
-        <div className="head w-10/12   m-auto md:max-w-screen-lg">
+        <main>
+        <div className="head w-10/12   m-auto py-10 md:max-w-screen-lg">
           <img className="mb-10 block w-4/6 m-auto" alt="accueil" src="accueil.svg"/>
           <h2 className=" text-4xl text-left mb-5">Notre concept</h2>
           <p className=" text-left mb-5">

@@ -4,14 +4,17 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: contact
-  label: contact
+- type: directory
+  path: ''
+  label: contenu
+  create: all
   match: "**/*"
 - type: document
   path: ''
   label: page index
-  match: "**/*"
+- type: document
+  path: contact
+  label: contact
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

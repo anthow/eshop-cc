@@ -81,7 +81,6 @@ export function Aside(){
         )}
         </div>
 </aside>
-/* aside smartphone */
 
 
 

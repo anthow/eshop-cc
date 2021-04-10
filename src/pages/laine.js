@@ -67,10 +67,10 @@ export default function Laine() {
 
 <Aside />
 
-<div className="head w-10/12   m-auto py-10 md:max-w-screen-lg">
+<div className=" w-12/12 pt-5">
           <img className="m-auto block  mb-10" alt="Coccinelles et compagnies" src="laine.svg"/>
-          <h2 className=" italic text-4xl text-center mb-5">La laine des coccinelles</h2>
-          <p className=" m-auto text-center mb-5">
+          <h2 className=" w-12/12 italic text-4xl text-center mb-5">La laine des coccinelles</h2>
+          <p className=" w-10/12 m-auto text-center mb-5">
             Aenean maximus lorem vitae auctor ullamcorper. Aliquam cursus
             fermentum rhoncus. Aenean interdum n risus a iaculis. In placerat
             dolor purus, nec suscipit est iaculis at. Pellentesque nec nisl

@@ -34,6 +34,7 @@ export const Description = styled.div`
 
 export const Price = styled.div`
   font-style: italic;
+  padding-top:10px;
   padding-left: 20px;
   font-weight: bold;
   margin-top: auto;

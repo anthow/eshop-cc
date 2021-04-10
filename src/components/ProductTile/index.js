@@ -22,7 +22,7 @@ export function ProductTile({
   handle,
 }) {
   return (
-    <div className=" rounded-lg mb-5 mr-5 m-auto  w-full">
+    <div className=" mb-5 mr-5">
       <StyledLink to={`/products/${handle}`}>
       <div className="relative w-full pb-full">
       <StyledImg  fluid={imageFluid} />

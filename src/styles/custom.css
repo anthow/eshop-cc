@@ -1,3 +1,15 @@
+
+
+.description{border: 1px solid #eee4e4;
+  border-radius: 0.25rem; }
+
+
+.produit-image-thumb{
+  width:100px;
+  height:100px;
+}
+
+
 img.produit-image{
   display:block;
   width:250px;
@@ -31,10 +43,28 @@ min-height: 100vh;}
 
 
 /*-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------*/
+
 body{
-    font-family: "roboto";
-    color:#707070;
-  }
+  font-family: "roboto"  !important;
+  color:#707070;
+}
+
+h1,h2, h3{
+  font-family: "DancingScript" !important;
+  color:#4A0D17;
+}
+
+ button,.DancingScript{
+  font-family: "DancingScript" !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+
+
+
   
   .site{
     min-height: 100vh;
@@ -51,6 +81,11 @@ body{
   {
     background-color:#EDB720 !important;
   }
+
+  header.headeratelier, footer.footeratelier{
+    background-color: #57aab0;
+  }
+
 
 
 
@@ -93,10 +128,7 @@ body{
       grid-gap: theme('spacing.20')
     }
   
-  h2, h3{
-    font-family: "DancingScript";
-    color:#4A0D17;
-  }
+  
   
   
   img.valeur{

@@ -10,7 +10,7 @@ import { useLocation } from '@reach/router';
 
 
 
-export default function AllProducts() {
+export default function Laine() {
   const { products, collections } = React.useContext(ProductContext);
   const collectionProductMap = {};
   const { search } = useLocation();
@@ -67,11 +67,29 @@ export default function AllProducts() {
 
 <Aside />
 
+<div className="head w-10/12   m-auto py-10 md:max-w-screen-lg">
+          <img className="m-auto block  mb-10" alt="Coccinelles et compagnies" src="laine.svg"/>
+          <h2 className=" italic text-4xl text-center mb-5">La laine des coccinelles</h2>
+          <p className=" m-auto text-center mb-5">
+            Aenean maximus lorem vitae auctor ullamcorper. Aliquam cursus
+            fermentum rhoncus. Aenean interdum n risus a iaculis. In placerat
+            dolor purus, nec suscipit est iaculis at. Pellentesque nec nisl
+            risus. Nullam quis felis vel urna viverra mollis ac nec felis. In
+            scelerisque ante non vehicula auctor.
+            Aenean maximus lorem vitae auctor ullamcorper. Aliquam cursus
+            fermentum rhoncus. Aenean interdum n risus a iaculis. In placerat
+            dolor purus, nec suscipit est iaculis at. Pellentesque nec nisl
+            risus. Nullam quis felis vel urna viverra mollis ac nec felis. In
+            scelerisque ante non vehicula auctor.
+          </p>
         {!!filteredProducts.length && (
   <div className="product-list flex-grow py-10">
+
   <ProductsGrid products={filteredProducts} />
           </div>
         )}
+                </div>
+
       </section>
     </LayoutBoutique>
   );

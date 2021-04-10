@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductTileWrapper, Title, Price } from './styles';
+import { Title, Price } from './styles';
 import Img from 'gatsby-image';
 import { StyledLink } from '../StyledLink';
 import styled from "styled-components"

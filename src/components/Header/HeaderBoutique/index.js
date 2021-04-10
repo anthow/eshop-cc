@@ -13,7 +13,7 @@ export function HeaderBoutique({ siteTitle }) {
       <nav >
         <div className="flex flex-wrap container justify-between mx-auto p-2">
           <Link to="/" className="flex items-center no-underline">
-            <span className="ml-2 font-bold">
+            <span className=" DancingScript italic ml-2 font-bold">
             Coccinelles et compagnies
             </span>
           </Link>
@@ -50,12 +50,20 @@ export function HeaderBoutique({ siteTitle }) {
               </Link>
 
               <Link
-                to="/agenda"
+                to="/all-atelier"
                 partiallyActive
                 activeClassName="text-green-800 font-bold "
                 className="block p-1 md:px-4 md:inline-block"
               >
-                agenda
+                atelier
+              </Link>
+              <Link
+                to="/laine"
+                partiallyActive
+                activeClassName="text-green-800 font-bold "
+                className="block p-1 md:px-4 md:inline-block"
+              >
+                   La laine des coccinelles
               </Link>
               <Link
                 to="/contact"
@@ -73,7 +81,7 @@ export function HeaderBoutique({ siteTitle }) {
               >
                 blog
               </Link>
-              </div>
+            </div>
               <div>
 
       <Cart />

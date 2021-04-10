@@ -1,6 +1,6 @@
 import React from 'react';
 import { Input } from '../Input';
-import { ProductQuantityAdderWrapper } from './styles';
+//import { ProductQuantityAdderWrapper } from './styles';
 import CartContext from 'context/CartContext';
 
 export function ProductQuantityAdder({ variantId, available }) {
@@ -18,7 +18,7 @@ export function ProductQuantityAdder({ variantId, available }) {
 
   return (
     <>
-      <strong>Quantité</strong>
+      <p className="mb-3 mt-3 title-article font-bold ">Quantité</p>
       <form onSubmit={handleSubmit}>
         <Input
           disabled={!available}

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Filters,  } from '../Filters';
-import { Search } from '../Search'
+import { Filters,  } from '../../Filters';
+import { Search } from '../../Search'
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';
-import ProductContext from '../../context/ProductContext';
+import ProductContext from '../../../context/ProductContext';
 
-export function Aside(){
+export function AsideAtelier(){
 
     const { products, collections } = React.useContext(ProductContext);
     const collectionProductMap = {};
@@ -58,7 +58,7 @@ export function Aside(){
     return( 
         <aside className='list-product   text-left hidden md:flex  md:flex-col content-center  pr-4 '>
           
-          <img className='w-4/6 mx-auto mb-5 mt-3 ' alt="accueil" src="logo-boutique.svg"/>
+          <img className='w-4/6 mx-auto mb-5 mt-3 ' alt="accueil" src="logo-atelier.svg"/>
 <div className="mb-2">
 <Search />
 </div>
@@ -81,7 +81,6 @@ export function Aside(){
         )}
         </div>
 </aside>
-/* aside smartphone */
 
 
 

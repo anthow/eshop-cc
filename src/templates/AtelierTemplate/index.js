@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-onchange */
 import React from 'react';
 import { graphql } from 'gatsby';
-import {LayoutBoutique} from 'components/Layout/LayoutBoutique'
+import {LayoutAtelier} from 'components/Layout/LayoutBoutique'
 import {
 
   ImageGallery,
@@ -14,7 +14,7 @@ import { navigate, useLocation } from '@reach/router';
 import queryString from 'query-string';
 
 export const query = graphql`
-  query ProductQuery($shopifyId: String) {
+  query AtelierQuery($shopifyId: String) {
     shopifyProduct(shopifyId: { eq: $shopifyId }) {
       ...ShopifyProductFields
     }
@@ -54,7 +54,7 @@ export default function ProductTemplate(props) {
   };
 
   return (
-    <LayoutBoutique>
+    <LayoutAtelier>
       <SEO
         description={props.data.shopifyProduct.description}
         title={props.data.shopifyProduct.title}
@@ -112,6 +112,6 @@ export default function ProductTemplate(props) {
                 <h2>Description du produit</h2>
       <p>{props.data.shopifyProduct.description}</p>
 </div>
-    </LayoutBoutique>
+    </LayoutAtelier>
   );
 }

@@ -7,6 +7,11 @@ export const ImageGalleryWrapper = styled.section`
     margin:auto;
   }
 
+  >img{
+    width:400px;
+    height:400px;
+  }
+
   > div:last-child {
     margin-top: 5px;
     display: grid;

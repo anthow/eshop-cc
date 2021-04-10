@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Client from 'shopify-buy';
 
 const client = Client.buildClient({
-  domain: `testdemaboutiqueeee.myshopify.com`,
-  storefrontAccessToken: 'b5fdf24cf012d3f3f409ee14a4ac84e9',
+  domain: `coccinelles-et-compagnies.myshopify.com`,
+  storefrontAccessToken: '47399ff2cad45a9fa0a1d603cf1e8497',
 });
 
 const defaultState = {

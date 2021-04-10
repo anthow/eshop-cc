@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { Cart } from '../Cart';
+import { Cart } from '../../Cart';
 import { Link } from 'gatsby'
 
-export function Header({ siteTitle }) {
+export function HeaderAtelier({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false)
   return (
-    <header className=" text-white">
+    <header className=" headeratelier text-white">
       <Helmet>
         <title> Coccinelles et compagnies</title>
       </Helmet>
       <nav >
         <div className="flex flex-wrap container justify-between mx-auto p-2">
           <Link to="/" className="flex items-center no-underline">
-            <span className=" DancingScript  italic ml-2 font-bold">
+            <span className=" DancingScript italic ml-2 font-bold">
             Coccinelles et compagnies
             </span>
           </Link>
@@ -40,7 +40,7 @@ export function Header({ siteTitle }) {
           >
             <div className="text-sm font-regular mt-3 md:m-0">
              
-            <Link
+              <Link
                 to="/all-products"
                 partiallyActive
                 activeClassName="text-green-800 font-bold "
@@ -81,7 +81,6 @@ export function Header({ siteTitle }) {
               >
                 blog
               </Link>
-
               </div>
               <div>
 

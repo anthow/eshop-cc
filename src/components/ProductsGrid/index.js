@@ -4,7 +4,7 @@ import { ProductTile } from '../ProductTile';
 
 export function ProductsGrid({ products }) {
   return (
-    <ProductsGridWrapper>
+    <div class=" flex flex-col md:flex-row">
       {products.map(product => (
         <ProductTile
           handle={product.handle}
@@ -15,6 +15,6 @@ export function ProductsGrid({ products }) {
           title={product.title}
         />
       ))}
-    </ProductsGridWrapper>
+    </div>
   );
 }

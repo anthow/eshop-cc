@@ -1,12 +1,12 @@
 import React from 'react';
 import {  ProductsGrid, SEO } from 'components';
-import {LayoutBoutique} from 'components/Layout/LayoutBoutique'
-import {LayoutAllProduct} from 'components/Layout/LayoutAllProduct'
+import {LayoutBoutique} from 'components/LayoutBoutique'
 import { Aside } from 'components/aside'
 import ProductContext from 'context/ProductContext';
 //import styled from 'styled-components';
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';
+import AsideButton from '../AsideButton';
 
 
 

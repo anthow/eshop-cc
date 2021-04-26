@@ -1,7 +1,6 @@
-/* eslint-disable jsx-a11y/no-onchange */
 import React from 'react';
 import { graphql } from 'gatsby';
-import {LayoutBoutique} from 'components/Layout/LayoutBoutique'
+import {LayoutBoutique} from 'components/LayoutBoutique'
 import {
 
   ImageGallery,
@@ -59,7 +58,7 @@ export default function ProductTemplate(props) {
         description={props.data.shopifyProduct.description}
         title={props.data.shopifyProduct.title}
       />
-      <div className="flex flex-col md:flex-row content-center m-auto w-2/3 mt-4" >
+      <div className="flex flex-col md:flex-row content-center m-auto w-2/3 mt-10" >
       <div>
           <ImageGallery
             selectedVariantImageId={selectedVariant?.image.id}

@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
           <div className="site min-h-screen flex flex-col ">
 
       <Header />
-        <main className>{children}</main>
+        <main className="mt-10 md:mt-0" >{children} </main>
         <Footer />
         </div>
     </>

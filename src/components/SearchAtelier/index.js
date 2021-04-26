@@ -14,12 +14,12 @@ export function Search() {
 
     if (c) {
       navigate(
-        `/all-atelier?s=${encodeURIComponent(
+        `/all-products?s=${encodeURIComponent(
           searchTerm
         )}&c=${encodeURIComponent(c)}`
       );
     } else {
-      navigate(`/all-atelier?s=${encodeURIComponent(searchTerm)}`);
+      navigate(`/all-products?s=${encodeURIComponent(searchTerm)}`);
     }
   };
 

@@ -1,35 +1,27 @@
-import React from "react"
-import {  graphql } from "gatsby"
-import { LayoutAtelier } from 'components/LayoutAtelier'
-import { Aside } from 'components/aside'
-import { AtelierTile } from 'components/AtelierTile';
+import React from 'react';
+import ProductContext from 'context/ProductContext';
+import { CategoryFilterItem } from './CategoryFilterItem';
+import { FiltersWrapper } from './styles';
 
 
-const Atelierpage = ({ data }) => (
-  <LayoutAtelier>
-      <section className='list-product flex flex-col md:flex-row content-center space-x-4 w-12/12'>
 
 
-    <div className="product-list flex-grow ml-5 py-10">
-    <div class=" flex flex-col md:flex-row">
-    {data.allShopifyProduct.edges.map(({ node }) => (
-        <AtelierTile
-          handle={node.handle}
-          minPrice={node.priceRange.minVariantPrice.amount}
-          description={node.description}
-          imageFluid={node.images[0].localFile.childImageSharp.fluid}
-          key={node.shopifyId}
-          title={node.title}
+export function Filters(data) {
+  const { collections } = React.useContext(ProductContext);
+
+  return (
+    <FiltersWrapper>
+      <div className=' title-categorie font-bold text-center mb-6'>types de formations</div>
+      {data.collections.map(collection => (
+        <CategoryFilterItem
+          title={data.collection.title}
+          key={data.collection.shopifyId}
+          id={data.collection.shopifyId}
         />
       ))}
-    </div>
-          </div>
-    </section>
-    </LayoutAtelier>
-)
-export default Atelierpage
-
-
+    </FiltersWrapper>
+  );
+}
 export const query = graphql`
 fragment ProductTileFields on ShopifyProduct {
   handle
@@ -118,5 +110,4 @@ allShopifyCollection(
   }
 }
 }
-
-  `
+`

@@ -15,7 +15,7 @@ const StyledImg = styled(Img)`
   height:250px;
 `
 
-export function ProductTile({
+export function AtelierTile({
   title,
   imageFluid,
   minPrice,

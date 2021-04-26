@@ -6,10 +6,10 @@ const ContactPage = () => {
     <Layout>
       <section className="flex flex-col justify-center items-start  flex-wrap md:w-full contact-shadow">
 
-        <img className="mb-10 mt-10 block w-1/6 m-auto" alt="contact" src="logo-seul.svg" />
+        <img className="mb-10 mt-10 block w-1/2 md:w-1/6 m-auto" alt="contact" src="logo-seul.svg" />
 
-        <div className="contact-form w-full mb-20 w-max m-auto ">
-          <form method="post" action="#">
+        <div className="contact-form w-5/6 mb-20 w-max m-auto  md:w-full  ">
+          <form className="contact-form w-5/6 mb-20 w-max m-auto   " method="post" action="#">
             <div className="form-name m-auto">
               <label className="block  m-auto sm:inline-block mr-5  mb-3 block">
                 <input
@@ -37,7 +37,7 @@ const ContactPage = () => {
 
                 />
               </label>
-              <label className="  inline-block mb-3 block">
+              <label className="  inline-block mb-3 block ">
                 <input
                   className="border p-1"
                   type="text"
@@ -50,18 +50,17 @@ const ContactPage = () => {
             </div>
             <label className="block">
               <textarea
-                className=" w-max block mb-3 border p-2"
+                className=" w-max  md:m-auto block mb-3 border p-2"
                 name="message"
                 id="message"
                 rows="5"
-                cols="42"
                 placeholder="votre message"
 
               />
             </label>
 
             <button
-              className="  block  p-2  w-auto  text-center valeur rounded-xl text-white "
+              className="  block mt-2  p-2  w-auto m-auto  text-center valeur rounded-xl text-white "
               name="button"
               type="button"
             >

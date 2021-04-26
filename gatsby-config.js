@@ -21,6 +21,33 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-optional-chaining`,
     'gatsby-plugin-postcss',
+    `gatsby-plugin-styled-components`,
+
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        // You can find your read-only API token under the Settings > API tokens
+        // section of your administrative area. Make sure to grant both CDA and CMA permissions.
+        apiToken: `4bc27cba78206fcf7af0cf18aa3816`,
+  
+        // The project environment to read from. Defaults to the primary environment:
+        environment: `main`,
+  
+        // If you are working on development/staging environment, you might want to
+        // preview the latest version of records instead of the published one:
+        previewMode: false,
+  
+        // Disable automatic reloading of content when some change occurs on DatoCMS:
+        disableLiveReload: false,
+  
+        // Custom API base URL (most don't need this)
+        // apiUrl: 'https://site-api.datocms.com',
+  
+        
+        },
+      },
+  
+  
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

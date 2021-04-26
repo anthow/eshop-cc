@@ -63,7 +63,12 @@ h1,h2, h3{
 /*-----------------------------------------------------------------------------------*/
 
 
+.gris{
+  color:  #707070;
 
+}
+
+.jaune{background-color: #EDB720;}
 
   
   .site{
@@ -92,11 +97,14 @@ h1,h2, h3{
   .concept-boutique{
   background-color:#EEE4E4;
   border-top: solid 7px #EDB720;
+  min-height: 370px;
   }
   
   .concept-atelier{
     background-color:#E0D7D7;
     border-top: solid 7px #168992;
+    min-height: 370px;
+
   
   }
   main{
@@ -210,3 +218,21 @@ h1,h2, h3{
     .btn-green:hover {
       @apply bg-green-800;
     }
+
+    @media screen and (max-width: 992px) {
+      concept-boutique{
+        background-color:#EEE4E4;
+        border-top: solid 7px #EDB720;
+        }
+        
+        .concept-atelier{
+          background-color:#E0D7D7;
+          border-top: solid 7px #168992;
+          min-height: auto;
+      
+        
+        }
+    }
+
+
+  

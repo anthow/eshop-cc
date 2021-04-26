@@ -11,7 +11,7 @@ const query = graphql`
     }
   }
   {
-    allShopifyProduct(filter: {productType: {eq: "Boutique"}    }) {
+    allShopifyProduct(filter: {productType: {eq: "Atelier"}    }) {
       edges {
       node {
         images {
@@ -74,7 +74,7 @@ const query = graphql`
 
   allShopifyCollection(
     sort: {fields: title, order: ASC}
-    filter: {products: {elemMatch: {productType: {glob: "Boutique"}}}}
+    filter: {products: {elemMatch: {productType: {glob: "Atelier"}}}}
   ) {
     edges {
       node {
@@ -88,7 +88,7 @@ const query = graphql`
       }
     }
   }
-}
+  }
 `;
 
 const defaultState = {

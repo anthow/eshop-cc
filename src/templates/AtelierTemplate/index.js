@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-onchange */
 import React from 'react';
 import { graphql } from 'gatsby';
-import {LayoutAtelier} from 'components/Layout/LayoutBoutique'
+import {LayoutAtelier} from 'components/Layout/LayoutAtelier'
 import {
 
   ImageGallery,
@@ -21,7 +21,7 @@ export const query = graphql`
   }
 `;
 
-export default function ProductTemplate(props) {
+export default function AtelierTemplate(props) {
   const { getProductById } = React.useContext(CartContext);
   const [product, setProduct] = React.useState(null);
   const [selectedVariant, setSelectedVariant] = React.useState(null);
@@ -59,7 +59,7 @@ export default function ProductTemplate(props) {
         description={props.data.shopifyProduct.description}
         title={props.data.shopifyProduct.title}
       />
-      <div className="flex flex-col md:flex-row content-center m-auto w-2/3 mt-4" >
+      <div className="flex flex-col md:flex-row content-center m-auto w-2/3 mt-10" >
       <div>
           <ImageGallery
             selectedVariantImageId={selectedVariant?.image.id}

@@ -1,7 +1,7 @@
 //import { fromJSON } from 'postcss';
 import React from 'react';
 import { HeaderBoutique } from '../HeaderBoutique'
-import { FooterBoutique } from '../footer/footerBoutique';
+import { Footer } from '../footer/';
 import "@fontsource/roboto"
 import "@fontsource/dancing-script"
 const LayoutBoutique = ({ children }) => {
@@ -11,7 +11,7 @@ const LayoutBoutique = ({ children }) => {
 
       <HeaderBoutique/>
         <main className="mt-10 md:mt-0">{children} </main>
-        <FooterBoutique />
+        <Footer />
         </div>
     </>
   );

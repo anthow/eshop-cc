@@ -68,7 +68,7 @@ h1,h2, h3{
 
 }
 
-.jaune{background-color: #EDB720;}
+.jaune{background-color: #ec6726;}
 
   
   .site{
@@ -84,7 +84,7 @@ h1,h2, h3{
   
   header.headerboutique, footer.FooterBoutique,.buy-boutique
   {
-    background-color:#EDB720 !important;
+    background-color:#ec6726 !important;
   }
 
   header.headeratelier, footer.footeratelier{
@@ -96,13 +96,13 @@ h1,h2, h3{
 
   .concept-boutique{
   background-color:#EEE4E4;
-  border-top: solid 7px #EDB720;
+  border-top: solid 7px #ec6726;
   min-height: 370px;
   }
   
   .concept-atelier{
     background-color:#E0D7D7;
-    border-top: solid 7px #168992;
+    border-top: solid 7px #008492;
     min-height: 370px;
 
   
@@ -113,11 +113,11 @@ h1,h2, h3{
   }
   
   button.boutique{
-    background-color:#EDB720;
+    background-color:#ec6726;
     width: 100px;
   }
   button.atelier{
-    background-color:#168992;
+    background-color:#008492;
     width: 100px;
   }
   
@@ -139,10 +139,10 @@ h1,h2, h3{
   
   
   
-  img.valeur{
-    width:150px;
-    height:150px;
-  }
+    img.valeur{
+      width:250px;
+      height:250px;
+    }
     
   
     @screen sm {
@@ -222,12 +222,12 @@ h1,h2, h3{
     @media screen and (max-width: 992px) {
       concept-boutique{
         background-color:#EEE4E4;
-        border-top: solid 7px #EDB720;
+        border-top: solid 7px #ec6726;
         }
         
         .concept-atelier{
           background-color:#E0D7D7;
-          border-top: solid 7px #168992;
+          border-top: solid 7px #008492;
           min-height: auto;
       
         

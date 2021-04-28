@@ -28,7 +28,7 @@ export function ProductQuantityAdder({ variantId, available }) {
           value={quantity}
           onChange={handleQuantityChange}
         />
-        <button type="submit" className="  block mt-5 p-2  w-auto buy-boutique whitespace-nowrap rounded-xl text-white "
+        <button type="submit" className="  block mt-5 p-2  w-auto buy-boutique whitespace-nowrap rounded-full text-white "
  disabled={!available} fullWidth>
           Ajouter au panier
         </button>

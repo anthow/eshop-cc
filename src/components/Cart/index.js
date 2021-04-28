@@ -13,7 +13,7 @@ export function Cart() {
   }
   return (
     <CartWrapper>
-      <FaShoppingCart size="1.5em" />
+      <img className="w-6" src="panier.svg" />
       <div className="md:text-white">
         {totalQuantity} articles(s) / {checkout?.totalPrice || '0.00'}€
       </div>

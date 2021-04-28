@@ -56,9 +56,9 @@ export function Aside(){
 
 
     return( 
-        <aside className='list-product   text-left hidden md:flex  md:flex-col content-center  pr-4 '>
+        <aside className='list-product shadow-xl  text-left hidden md:flex  md:flex-col content-center  pr-4 '>
           
-          <img className='w-4/6 mx-auto mb-5 mt-3 ' alt="accueil" src="logo-boutique.svg"/>
+          <img className='w-5/6 mx-auto mb-5 mt-3 ' alt="accueil" src="logo-boutique.svg"/>
 <div className="mb-2">
 <Search />
 </div>

@@ -58,13 +58,9 @@ module.exports = {
           'roboto:700i',
           `roboto\:800`,
           'roboto:800i',
-          `DancingScript\:400`,
-          'DancingScript:400i',
-          `DancingScript\:700`,
-          'DancingScript:700i',
-          `DancingScript\:800`,
-          'DancingScript:800i',
+          `Dancing Script`,
         ],
+        display: 'swap'
       },
     },
     {

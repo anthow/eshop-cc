@@ -6,11 +6,11 @@ import { Cart } from '../../Cart';
 import { Aside } from "./aside" 
 
 const Navigation = styled.nav`
-  height: 10vh;
+  height: 7vh;
   display: flex;
   position: relative;
   z-index: 999;
-  background-color: #EDB720;
+  background-color: #ec6726;
 
   @media (max-width: 768px) {
     position: fixed;
@@ -19,7 +19,7 @@ const Navigation = styled.nav`
     left: 0;
     right: 0;
     left: 0;
-    background-color: #EDB720;  }
+    background-color: #ec6726;  }
 `
 
 const Toggle = styled.div`

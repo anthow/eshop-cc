@@ -9,6 +9,9 @@ const ContactPage = () => {
         <img className="mb-10 mt-10 block w-1/2 md:w-1/6 m-auto" alt="contact" src="logo-seul.svg" />
 
         <div className="contact-form w-5/6 mb-20 w-max m-auto  md:w-full  ">
+        <h2 className="font-bold text-2xl text-center  mb-10">
+          Formulaire de contact
+          </h2>
           <form className="contact-form w-5/6 mb-20 w-max m-auto   " method="post" action="#">
             <div className="form-name m-auto">
               <label className="block  m-auto sm:inline-block mr-5  mb-3 block">
@@ -50,7 +53,7 @@ const ContactPage = () => {
             </div>
             <label className="block">
               <textarea
-                className=" w-max  md:m-auto block mb-3 border p-2"
+                className=" w-max md:w-12/12  md:m-auto block mb-3 border p-2"
                 name="message"
                 id="message"
                 rows="5"
@@ -60,7 +63,7 @@ const ContactPage = () => {
             </label>
 
             <button
-              className="  block mt-2  p-2  w-auto m-auto  text-center valeur rounded-xl text-white "
+              className="  block mt-2  p-2  w-auto m-auto  text-center valeur rounded-full text-white "
               name="button"
               type="button"
             >
@@ -69,13 +72,13 @@ const ContactPage = () => {
           </form>
         </div>
       </section>
-      <section className="flex justify-center items-start  flex-wrap md:w-full  mb-10">
+      <section className="flex justify-center items-start  flex-wrap md:w-full  mt-10 mb-10">
         <article className="m-auto  flex flex-col md:w-5/12 mb-5 md:mb-0 mx-5 w-10/12">
-          <h2 className="font-bold text-2xl text-center  mb-5">
+          <h2 className="font-bold text-2xl text-left  ">
             {" "}
-              Information de contact
+              Informations de contact
             </h2>
-          <h3 className="font-bold text-xl text-center mb-2">
+          <h3 className="font-bold text-xl text-left mb-2">
             {" "}
               Nom de l'entreprise
             </h3>
@@ -88,9 +91,9 @@ const ContactPage = () => {
           <p>numéro de compte en banque</p>
         </article>
         <article className=" md:w-5/12 mb-0 mx-5 w-10/12">
-          <h2 className="font-bold text-2xl text-center mb-5">
+          <h2 className="font-bold text-2xl text-center mt-20 md:mt-0 ">
 
-            réseaux sociaux
+            Réseaux sociaux
             </h2>
           <div className="flex items-center justify-center mb-10">
             <img className=" block w-40" alt="Coccinelles et compagnies" src="logo-titres.svg" />
@@ -119,7 +122,7 @@ const ContactPage = () => {
               <img className=" block w-20 mb-2" alt="Coccinelles et compagnies" src="ygaelle.svg" />
               <div className=" flex flex-row justify-around">
                 <a href="https://www.facebook.com">
-                  <img className=" block w-6" alt="facebook Ygaelle" src="facebook.svg" />
+                  <img className=" block w-6" alt="facebook Ygaelle" src="linkedin-ico-bord.svg" />
 
                 </a>
                 <a href="https://ygaelle.com/">

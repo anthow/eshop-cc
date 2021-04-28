@@ -24,7 +24,7 @@ export function Search() {
   };
 
   return (
-    <div className=" search-box flex flex-col search w-12/12 md:w-11/12 pl-2 pr-5  py-8 md:rounded-r-full box-content ">
+    <div className=" search-box flex flex-col search w-12/12 md:w-full  pr-4  py-4  box-content ">
     <SearchForm  onSubmit={handleSubmit}>
       <Input
         value={searchTerm}
@@ -32,7 +32,7 @@ export function Search() {
         className="search-input"
       />
       <button class="search text-white p-2 mt-2 font-bold rounded-full">
-        rechercher
+        Rechercher
       </button>
     </SearchForm>
     </div>

@@ -67,16 +67,16 @@ export default function ProductTemplate(props) {
             
           />
         </div>        <div className="mt-4 md:mt-0 md:w-2/3 md:mx-8"> 
-        <button onClick={() => navigate(-1)}>revenir aux produits</button>
+        <button className="border-2 px-2 p-1 rounded-full "onClick={() => navigate(-1)}>Revenir aux produits</button>
           <h1 className="title-article text-4xl font-bold" >{props.data.shopifyProduct.title}</h1>
-          <p>matière</p>
+          <p>Matière</p>
           {product?.availableForSale && !!selectedVariant && (
             <>
               {product?.variants.length > 1 && (
                 
                   <div className=" flex flex-col  mt-0 ">
                   <Price >{selectedVariant.price} €</Price> 
-                  <p className="mb-3 title-article font-bold ">options</p>
+                  <p className="mb-3 title-article font-bold ">Options</p>
                   <div className=" flex flex-row">
                   <select className="bg-transparent p-1"
                     value={selectedVariant.id}
@@ -106,7 +106,7 @@ export default function ProductTemplate(props) {
         </div>
        
       </div>
-      <div className=" markdown description mt-4 mb-4  w-2/3  m-auto border-2t p-8"
+      <div className=" markdown description mt-14 mb-4  w-2/3  m-auto border-2t p-8 pb-10 pt-4 mb-8 "
       >
                 <h2>Description du produit</h2>
       <p>{props.data.shopifyProduct.description}</p>

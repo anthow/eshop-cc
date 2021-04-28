@@ -6,8 +6,8 @@ import { Cart } from '../../Cart';
 
 
 const Navigation = styled.nav`
-  height: 10vh;
-  display: flex;
+height: 7vh;
+display: flex;
   position: relative;
   z-index: 999;
 
@@ -90,10 +90,10 @@ const Navbar = () => {
   return (
     <Navigation classname="text-white">
       <title> Coccinelles et compagnies</title>
-      <div className="flex flex-wrap container justify-between mx-auto p-2">
+      <div className="flex flex-wrap container justify-between mx-auto">
 
         <Link to="/" className="flex items-center no-underline">
-          <span className=" DancingScript italic ml-2 font-bold">
+          <span className=" DancingScript italic font-bold">
             Coccinelles et compagnies
             </span>
         </Link>

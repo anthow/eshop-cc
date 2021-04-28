@@ -28,7 +28,7 @@ export function ProductTile({
       <StyledImg  fluid={imageFluid} />
       </div>
       <div className="bg-white">
-      <div className=" title-article h-10 md:h-20">
+      <div className=" title-article DancingScript h-10 md:h-20">
       <Title>{title}</Title>
       </div>
       <div className=" text-l">

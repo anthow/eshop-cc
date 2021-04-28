@@ -6,8 +6,8 @@ import { Cart } from '../../Cart';
 
 
 const Navigation = styled.nav`
-  height: 10vh;
-  display: flex;
+height: 7vh;
+display: flex;
   position: relative;
   z-index: 999;
   background-color: #57aab0;

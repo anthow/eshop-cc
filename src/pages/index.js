@@ -13,7 +13,8 @@ import {
 <Layout>
         <main>
         <div className="head w-10/12   m-auto mt-10 md: mt-0 py-10 md:max-w-screen-lg">
-          <img className="mb-10 block w-6/6 md:w-4/6 m-auto" alt="accueil" src="accueil.svg"/>
+          <img className="mb-10 hidden md:block w-6/6 md:w-4/6 m-auto" alt="accueil" src={data.datoCmsPageDAccueil.imageConcept.url}/>
+          <img className="mb-10 md:hidden block w-6/6 md:w-4/6 m-auto" alt="accueil" src={data.datoCmsPageDAccueil.imageConceptSmartphone.url}/>
           <h2 className=" italic text-4xl text-left mb-5">Notre concept</h2>
           <p className="text-left mb-10">
             {data.datoCmsPageDAccueil.texteConcept}
@@ -126,6 +127,46 @@ export const query = graphql`
         height
       }
     }
+    imageConcept {
+      alt
+      author
+      basename
+      blurhash
+      copyright
+      customData
+      createdAt
+      fluid {
+        aspectRatio
+        base64
+        sizes
+        height
+        src
+        srcSet
+        tracedSVG
+        width
+      }
+      url
+    }
+    imageConceptSmartphone {
+      alt
+      author
+      basename
+      blurhash
+      copyright
+      customData
+      createdAt
+      fluid {
+        aspectRatio
+        base64
+        sizes
+        height
+        src
+        srcSet
+        tracedSVG
+        width
+      }
+      url
+    }
     imagev1 {
       alt
       author
@@ -198,5 +239,6 @@ export const query = graphql`
   }
 }
 `
+
 
 export default IndexPage;

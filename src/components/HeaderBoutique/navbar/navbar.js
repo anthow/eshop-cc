@@ -40,16 +40,19 @@ const Navbox = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    flex-direction: column;
     position: fixed;
-    width: 100%;
+    flex-direction: column;
     justify-content: flex-start;
-    padding-top: 2vh;
+    padding-top: 1vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
+    width: 99%;
     top: 8vh;
+    left: 0px;
+    max-height: 100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
     left: ${props => (props.open ? "-100%" : "0")};
-    height:200vh;
   }
 `
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Filters,  } from '../../Filters';
-import { Search } from '../../Search'
+import { Filters,  } from '../Filters';
+import { Search } from '../Search'
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';
-import ProductContext from '../../../context/ProductContext';
+import ProductContext from '../../context/ProductContext';
 
 export function AsideAtelier(){
 

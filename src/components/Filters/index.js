@@ -10,12 +10,15 @@ export function Filters() {
     <FiltersWrapper>
       <div className=' title-categorie font-bold text-center mb-6'>types de produits</div>
       {collections.map(collection => (
-        <CategoryFilterItem
+        <CategoryFilterItem 
           title={collection.title}
           key={collection.shopifyId}
           id={collection.shopifyId}
-        />
+          className=' title-categorie font-bold text-center mb-6'></CategoryFilterItem>
+    
       ))}
+
     </FiltersWrapper>
+    
   );
 }

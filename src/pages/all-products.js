@@ -6,7 +6,6 @@ import ProductContext from 'context/ProductContext';
 //import styled from 'styled-components';
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';
-import AsideButton from '../AsideButton';
 
 
 

@@ -29,8 +29,8 @@ const NavItem = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    padding: 20px 0;
-    font-size: 1.5rem;
+    padding: 10px 0;
+    font-size: 1.3rem;
     z-index: 6;
     color: black;
   }
@@ -50,7 +50,7 @@ const NavbarLinks = () => {
                 partiallyActive
                 activeClassName="font-bold "
                 className="block p-1 md:px-4 md:inline-block">Contact</NavItem>
-      <NavItem  to="/all-products"
+      <NavItem  to="/blog"
                 partiallyActive
                 activeClassName=" font-bold "
                 className="block p-1 md:px-4 md:inline-block">blog</NavItem>

@@ -1,14 +1,14 @@
 import React from "react"
 import {  graphql } from "gatsby"
 import { LayoutAtelier } from 'components/LayoutAtelier'
-import { Aside } from 'components/aside'
+import { AsideAtelier } from 'components/asideAtelier'
 import { AtelierTile } from 'components/AtelierTile';
 
 
 const Atelierpage = ({ data }) => (
   <LayoutAtelier>
       <section className='list-product flex flex-col md:flex-row content-center space-x-4 w-12/12'>
-
+<AsideAtelier />
 
     <div className="product-list flex-grow ml-5 py-10">
     <div class=" flex flex-col md:flex-row">

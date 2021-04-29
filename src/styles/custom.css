@@ -1,4 +1,12 @@
 
+.row{
+  display: inline-block;
+  width: 25%;
+margin:0px}
+
+.rowes{
+  margin-bottom: -5px;
+}
 
 .description{border: 1px solid #eee4e4;
   border-radius: 0.25rem; }
@@ -46,19 +54,18 @@ min-height: 100vh;}
 
 /*-----------------------------------------------------------------------------------*/
 
-body{
-  font-family: "roboto"  !important;
-  color:#707070;
+body, p{
+  font-family: 'Roboto', sans-serif !important;
+    color:#707070;
 }
 
 h1,h2, h3{
-  font-family: "DancingScript" !important;
-  color:#4A0D17;
+  font-family: 'Dancing Script', cursive;
+    color:#4A0D17;
 }
 
  button,.DancingScript{
-  font-family: "DancingScript" !important;
-}
+  font-family: 'Dancing Script', cursive;}
 
 /*-----------------------------------------------------------------------------------*/
 

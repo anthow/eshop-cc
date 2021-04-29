@@ -27,6 +27,7 @@
     "gatsby-source-datocms": "^2.6.12",
     "gatsby-source-filesystem": "^3.3.0",
     "gatsby-source-shopify": "^4.3.0",
+    "gatsby-transformer-remark": "^4.1.0",
     "gatsby-transformer-sharp": "^3.3.0",
     "netlify-lambda": "^2.0.4",
     "prop-types": "^15.7.2",

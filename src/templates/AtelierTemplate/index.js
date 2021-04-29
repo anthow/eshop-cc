@@ -68,9 +68,8 @@ export default function AtelierTemplate(props) {
             
           />
         </div>        <div className="mt-4 md:mt-0 md:w-2/3 md:mx-8"> 
-        <button onClick={() => navigate(-1)}>revenir aux produits</button>
+        <button onClick={() => navigate(-1)}>revenir aux ateliers</button>
           <h1 className="title-article text-4xl font-bold" >{props.data.shopifyProduct.title}</h1>
-          <p>matière</p>
           {product?.availableForSale && !!selectedVariant && (
             <>
               {product?.variants.length > 1 && (

@@ -10,7 +10,7 @@ const Atelierpage = ({ data }) => (
       <section className='list-product flex flex-col md:flex-row content-center space-x-4 w-12/12'>
 <AsideAtelier />
 
-    <div className="product-list flex-grow ml-5 py-10">
+    <div className="product-list flex-grow py-10">
     <div class=" flex flex-col md:flex-row">
     {data.allShopifyProduct.edges.map(({ node }) => (
         <AtelierTile

@@ -14,17 +14,17 @@ export function Search() {
 
     if (c) {
       navigate(
-        `/all-products?s=${encodeURIComponent(
+        `/all-atelier?s=${encodeURIComponent(
           searchTerm
         )}&c=${encodeURIComponent(c)}`
       );
     } else {
-      navigate(`/all-products?s=${encodeURIComponent(searchTerm)}`);
+      navigate(`/all-atelier?s=${encodeURIComponent(searchTerm)}`);
     }
   };
 
   return (
-    <div className=" search-box flex flex-col search w-11/12 pl-2 pr-5  py-8 rounded-r-full box-content ">
+    <div className=" search-box flex flex-col search w-12/12 md:w-full  pr-4  py-4  box-content ">
     <SearchForm  onSubmit={handleSubmit}>
       <Input
         value={searchTerm}
@@ -32,7 +32,7 @@ export function Search() {
         className="search-input"
       />
       <button class="search text-white p-2 mt-2 font-bold rounded-full">
-        rechercher
+        Rechercher
       </button>
     </SearchForm>
     </div>

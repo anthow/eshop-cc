@@ -6,14 +6,13 @@ import { Cart } from '../../Cart';
 
 
 const Navigation = styled.nav`
-height: 7vh;
 display: flex;
   position: relative;
   z-index: 999;
 
   @media (max-width: 768px) {
     position: fixed;
-    height: 8vh;
+    height: 12vh;
     top: 0;
     left: 0;
     right: 0;
@@ -44,17 +43,17 @@ const Navbox = styled.div`
     position: fixed;
     width: 100%;
     justify-content: flex-start;
-    padding-top: 10vh;
+    padding-top: 1vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 8vh;
+    top: 12vh;
     left: ${props => (props.open ? "-100%" : "0")};
     height:100vh;
   }
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: white;
   width: 30px;
   height: 3px;
   transition: all .3s linear;
@@ -66,7 +65,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: white;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -90,13 +89,13 @@ const Navbar = () => {
   return (
     <Navigation classname="text-white">
       <title> Coccinelles et compagnies</title>
-      <div className="flex flex-wrap container justify-between mx-auto">
+      <div className="flex flex-wrap container justify-between mx-1">
 
-        <Link to="/" className="flex items-center no-underline">
-          <span className=" DancingScript italic font-bold">
+      <Link to="/" className="flex items-center no-underline">
+            <span className=" text-2xl md:text-4xl md:mb-1 DancingScript italic font-bold">
             Coccinelles et compagnies
             </span>
-        </Link>
+            </Link>
         <Toggle
           navbarOpen={navbarOpen}
           onClick={() => setNavbarOpen(!navbarOpen)}

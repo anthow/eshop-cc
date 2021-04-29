@@ -1,6 +1,6 @@
 import React from 'react';
 import { Filters,  } from '../Filters';
-import { Search } from '../Search'
+import { Search } from '../SearchAtelier'
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';
 import ProductContext from '../../context/ProductContext';

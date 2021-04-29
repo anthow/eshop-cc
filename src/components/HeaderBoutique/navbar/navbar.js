@@ -6,20 +6,19 @@ import { Cart } from '../../Cart';
 import { Aside } from "./aside" 
 
 const Navigation = styled.nav`
-  height: 7vh;
   display: flex;
   position: relative;
   z-index: 999;
-  background-color: #ec6726;
+  background-color:#57aab0;
 
   @media (max-width: 768px) {
     position: fixed;
-    height: 8vh;
+    height: 12vh;
     top: 0;
     left: 0;
     right: 0;
     left: 0;
-    background-color: #ec6726;  }
+    background-color: #57aab0;  }
 `
 
 const Toggle = styled.div`
@@ -47,7 +46,7 @@ const Navbox = styled.div`
     background-color: #fff;
     transition: all 0.3s ease-in;
     width: 99%;
-    top: 8vh;
+    top: 12vh;
     left: 0px;
     max-height: 100%;
     overflow-y:scroll;
@@ -57,7 +56,7 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: white;
   width: 30px;
   height: 3px;
   transition: all .3s linear;
@@ -69,7 +68,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: white;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -93,10 +92,10 @@ const Navbar = () => {
     return (
         <Navigation classname="text-white">
                       <title> Coccinelles et compagnies</title>
-        <div className="flex flex-wrap container justify-between mx-auto p-2">
+                      <div className="flex flex-wrap container justify-between mx-1">
               
             <Link to="/" className="flex items-center no-underline">
-            <span className=" DancingScript italic ml-2 font-bold">
+            <span className=" text-2xl md:text-4xl md:mb-1 DancingScript italic font-bold">
             Coccinelles et compagnies
             </span>
           </Link> 

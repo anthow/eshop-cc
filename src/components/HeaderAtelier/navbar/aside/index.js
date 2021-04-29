@@ -1,9 +1,9 @@
 import React from 'react';
-import { Filters,  } from '../Filters';
-import { Search } from '../Search'
+import { Filters,  } from '../../../Filters';
+import { Search } from '../../../SearchAtelier'
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';
-import ProductContext from '../../context/ProductContext';
+import ProductContext from '../../../../context/ProductContext';
 
 export function Aside(){
 
@@ -56,9 +56,7 @@ export function Aside(){
 
 
     return( 
-        <aside className='list-product shadow-xl  text-left hidden md:flex  md:flex-col content-center  pr-4 '>
-          
-          <img className='w-5/6 mx-auto mb-5 mt-3 ' alt="accueil" src="logo-boutique.svg"/>
+          <>
 <div className="mb-2">
 <Search />
 </div>
@@ -70,17 +68,17 @@ export function Aside(){
       )}
         <Filters />
         {!filteredProducts.length && (
-          <div className="text-center mt-5">
-              <p className="">aucun article trouvé pour</p>
+          <div>
+            <h3>
+              <span>Aucun article trouvé</span>
               &nbsp;
-              <strong className="title-categorie">'{searchTerm}'</strong>
-            
+              <strong>'{searchTerm}'</strong>
+            </h3>
            
           </div>
         )}
         </div>
-</aside>
-
+</>
 
 
     );

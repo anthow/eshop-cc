@@ -52,12 +52,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `roboto\:400`,
-          'roboto:400i',
-          `roboto\:700`,
-          'roboto:700i',
-          `roboto\:800`,
-          'roboto:800i',
+          `roboto Mono`,
           `Dancing Script`,
         ],
         display: 'swap'

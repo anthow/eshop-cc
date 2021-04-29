@@ -73,13 +73,11 @@ const ContactPage = () => {
         </div>
       </section>
       <section className="flex justify-center items-start  flex-wrap md:w-full  mt-10 mb-10">
-        <article className="m-auto  flex flex-col md:w-5/12 mb-5 md:mb-0 mx-5 w-10/12">
-          <h2 className="font-bold text-2xl text-left  ">
-            {" "}
+      <article className=" md:w-5/12 mb-0 mx-5 ">
+      <h2 className="font-bold text-2xl text-left mt-20 md:mt-0 ">
               Informations de contact
             </h2>
           <h3 className="font-bold text-xl text-left mb-2">
-            {" "}
               Nom de l'entreprise
             </h3>
           <p>adresse 1</p>
@@ -90,7 +88,7 @@ const ContactPage = () => {
           <p>numéro d'entreprise</p>
           <p>numéro de compte en banque</p>
         </article>
-        <article className=" md:w-5/12 mb-0 mx-5 w-10/12">
+        <article className=" md:w-5/12 mb-0 mx-5">
           <h2 className="font-bold text-2xl text-center mt-20 md:mt-0 ">
 
             Réseaux sociaux

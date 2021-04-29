@@ -23,14 +23,32 @@ import {
         <div className="content">
           <section className="flex justify-center mb-10 max-w-max  flex-wrap">
             <article className="  md:w-1/2 mb-0 m-auto w-12/12 md:mb-3">
-              <div className="concept-boutique  p-10  mb-5">
+  <div className="rowes">
+                <div className="row">
+                <img
+                src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
+              </div>
+              <div className="row">
+                <img
+                src={data.datoCmsPageDAccueil.imageV2.url}  alt="valeur-1" />
+              </div>
+              <div className="row">
+                <img
+                src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois" />
+              </div>
+              <div className="row">
+                <img
+                src={data.datoCmsPageDAccueil.imageV2.url}  alt="valeur-1" />
+              </div>
+              </div>
+              <div className="concept-atelier  p-10  mb-5">
                 <h3 className=" italic font-bold text-2xl text-left mb-5"> Boutique</h3>
                 <p className="p-2 text-left mb-3">
                 {data.datoCmsPageDAccueil.texteBoutique}
 
                 </p>
                 <button
-                className=" italic block m-auto p-2  w-auto  text-center boutique rounded-full text-white "
+                className=" italic block m-auto p-2  w-auto  text-center atelier rounded-full text-white "
                 name="button"
                 type="button"
               >
@@ -40,7 +58,25 @@ import {
          
             </article>
             <article className=" md:w-1/2 md: mb-0 m-auto w-12/12 mb-3">
-              <div className="concept-atelier p-10  mb-5">
+            <div className="rowes">
+                <div className="row">
+                <img
+                src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
+              </div>
+              <div className="row">
+                <img
+                src={data.datoCmsPageDAccueil.imageV2.url}  alt="valeur-1" />
+              </div>
+              <div className="row">
+                <img
+                src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois" />
+              </div>
+              <div className="row">
+                <img
+                src={data.datoCmsPageDAccueil.imageV2.url}  alt="valeur-1" />
+              </div>
+              </div>
+              <div className="concept-boutique p-10  mb-5">
                 <h3 className=" italic font-bold text-2xl text-left mb-5">
                   {" "}
                   Ateliers / Formations{" "}
@@ -50,7 +86,7 @@ import {
 
                 </p>
                 <button
-                className="  italic block m-auto p-2  w-auto  text-center atelier rounded-full text-white w-16"
+                className="  italic block m-auto p-2  w-auto  text-center boutique rounded-full text-white w-16"
                 name="button"
                 type="button"
               >

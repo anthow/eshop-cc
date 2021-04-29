@@ -10,10 +10,20 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+  
 
-  const { data } = await graphql(`
+
+  const {data} = await graphql(`
     {
-      allShopifyProduct {
+     produits: allShopifyProduct(filter: {productType: {eq: "Boutique"}    }) {
+        edges {
+          node {
+            shopifyId
+            handle
+          }
+        }
+      }
+      ateliers: allShopifyProduct(filter: {productType: {eq: "Atelier"}    }) {
         edges {
           node {
             shopifyId
@@ -24,15 +34,26 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  data.allShopifyProduct.edges.forEach(({ node }) => {
+ 
+  data.produits.edges.forEach(({ node }) => {
     createPage({
-      path: `produits/${node.handle}`,
+      component: produits,
       context: {
         shopifyId: node.shopifyId,
       },
       component: path.resolve('./src/templates/ProductTemplate/index.js'),
     });
   });
-};
+  data.ateliers.edges.forEach(({ node }) => {
+    createPage({
+      component: produits,
+      context: {
+        shopifyId: node.shopifyId,
+      },
+      component: path.resolve('./src/templates/AtelierTemplate/index.js'),
+    });
+  });
+  };
+  
 
 

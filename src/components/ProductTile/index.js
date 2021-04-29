@@ -22,9 +22,9 @@ export function ProductTile({
   handle,
 }) {
   return (
-    <div className=" mb-5 mr-5">
+    <div className=" mb-5 mr-5 hover:opacity-80">
       <StyledLink to={`/produits/${handle}`}>
-      <div className="relative w-full pb-full">
+      <div className="relative w-full pb-full ">
       <StyledImg  fluid={imageFluid} />
       </div>
       <div className="bg-white">

@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
   
 
 
-	return graphql(`
+  const {data} = await graphql(`
     {
      produits: allShopifyProduct(filter: {productType: {eq: "Boutique"}    }) {
         edges {
@@ -32,34 +32,28 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
-		if (result.errors) {
-			Promise.reject(result.errors);
-		}
+  `);
 
-		// Create doc pages
-		result.data.produits.edges.forEach(({ node }) => {
-			createPage({
-        component: path.resolve('./src/templates/ProductTemplate/index.js'),                
-        path: `produits/${node.handle}`,
-                 context: {
+ 
+  data.produits.edges.forEach(({ node }) => {
+    createPage({
+      component: produits,
+      context: {
         shopifyId: node.shopifyId,
       },
-			});
-		});
-		// Create blog pages
-		result.data.ateliers.edges.forEach(({ node }) => {
-			createPage({
-        component: path.resolve('./src/templates/AtelierTemplate/index.js'),                
-        path: `ateliers/${node.handle}`,
-        context: {
-          shopifyId: node.shopifyId,
-        },
-			});
-		});
-	});
-};
+      component: path.resolve('./src/templates/ProductTemplate/index.js'),
+    });
+  });
+  data.ateliers.edges.forEach(({ node }) => {
+    createPage({
+      component: produits,
+      context: {
+        shopifyId: node.shopifyId,
+      },
+      component: path.resolve('./src/templates/AtelierTemplate/index.js'),
+    });
+  });
+  };
+  
 
 
- 
- 

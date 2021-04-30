@@ -41,11 +41,11 @@ const NavbarLinks = () => {
     <NavItem  to="/all-products"
                 partiallyActive
                 activeClassName="font-bold "
-                className="block p-1 md:px-4 md:inline-block">boutique</NavItem>
+                className="block p-1 md:px-4 md:inline-block">Boutique</NavItem>
       <NavItem  to="/all-atelier"
                 partiallyActive
                 activeClassName="font-bold "
-                className="block p-1 md:px-4 md:inline-block">ateliers</NavItem>
+                className="block p-1 md:px-4 md:inline-block">Ateliers</NavItem>
       <NavItem  to="/contact"
                 partiallyActive
                 activeClassName="font-bold "
@@ -53,7 +53,7 @@ const NavbarLinks = () => {
       <NavItem  to="/blog"
                 partiallyActive
                 activeClassName=" font-bold "
-                className="block p-1 md:px-4 md:inline-block">blog</NavItem>
+                className="block p-1 md:px-4 md:inline-block">Blog</NavItem>
     </div>
   )
 }

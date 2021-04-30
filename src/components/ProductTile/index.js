@@ -31,8 +31,8 @@ export function ProductTile({
       <div className=" title-article DancingScript h-10 md:h-20">
       <Title>{title}</Title>
       </div>
-      <div className=" text-l">
-      <Price>{parseFloat(minPrice).toFixed(2)} euros</Price>
+      <div className=" couleurboutique text-l">
+      <Price className="couleurboutique">{parseFloat(minPrice).toFixed(2)}€</Price>
       </div>
       </div>
       </StyledLink>

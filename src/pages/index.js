@@ -15,7 +15,7 @@ import {
         <div className="head w-10/12   m-auto mt-10 md: mt-0 py-10 md:max-w-screen-lg">
           <img className="mb-10 hidden md:block w-6/6 md:w-4/6 m-auto" alt="accueil" src={data.datoCmsPageDAccueil.imageConcept.url}/>
           <img className="mb-10 md:hidden block w-6/6 md:w-4/6 m-auto" alt="accueil" src={data.datoCmsPageDAccueil.imageConceptSmartphone.url}/>
-          <h2 className=" italic text-4xl text-left mb-5">Notre concept</h2>
+          <h2 className=" DancingScript italic text-5xl text-left mb-5">Notre concept</h2>
           <p className="text-left mb-10">
             {data.datoCmsPageDAccueil.texteConcept}
           </p>
@@ -42,13 +42,13 @@ import {
               </div>
               </div>
               <div className="concept-atelier  p-10  mb-5">
-                <h3 className=" italic font-bold text-2xl text-left mb-5"> Boutique</h3>
+                <h2 className=" DancingScript italic font-bold text-4xl text-left mb-5"> Boutique</h2>
                 <p className="p-2 text-left mb-3">
                 {data.datoCmsPageDAccueil.texteBoutique}
 
                 </p>
                 <button
-                className=" italic block m-auto p-2  w-auto  text-center atelier rounded-full text-white "
+                className=" italic block m-auto p-2 text-2xl  w-auto  text-center atelier rounded-full text-white "
                 name="button"
                 type="button"
               >
@@ -77,16 +77,16 @@ import {
               </div>
               </div>
               <div className="concept-boutique p-10  mb-5">
-                <h3 className=" italic font-bold text-2xl text-left mb-5">
+                <h2 className="DancingScript italic font-bold text-4xl text-left mb-5">
                   {" "}
                   Ateliers / Formations{" "}
-                </h3>
+                </h2>
                 <p className="p-2 text-left mb-3">
                 {data.datoCmsPageDAccueil.textesAteliers}
 
                 </p>
                 <button
-                className="  italic block m-auto p-2  w-auto  text-center boutique rounded-full text-white w-16"
+                className="  italic block m-auto p-2  w-auto  text-2xl text-center boutique rounded-full text-white w-16"
                 name="button"
                 type="button"
               >
@@ -98,15 +98,16 @@ import {
           </section>
           <div className="w-11/12  m-auto mt-10 md:mt-0 py-10 md:max-w-screen-lg">
 
-          <h2 className="  italic text-4xl text-left   mb-10">Nos valeurs</h2>
+          <h2 className="  italic text-5xl text-left DancingScript   mb-10">Nos valeurs</h2>
           <section className="flex justify-center flex-wrap mb-20">
             <article className="md:w-1/3 md: mb-0 m-auto w-11/12 mb-3">
               <img
                 className="block m-auto md:m-0 mb-3  valeur "
                 src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1"
               />
-              <h3 className=" italic font-bold text-2xl mb-5 text-center md:text-left">
+              <h3 className=" italic DancingScript font-bold text-3xl mb-5 text-center md:text-left">
               {data.datoCmsPageDAccueil.titrev1}
+              
 
               </h3>
               <p className="p-2   md:w-9/12  text-center md:text-left text-left mb-10">
@@ -119,7 +120,7 @@ import {
                 className="block m-auto md:m-0 mb-3  valeur "
                 src={data.datoCmsPageDAccueil.imageV2.url} alt="valeurs"
               />
-              <h3 className=" italic font-bold text-2xl mb-5 text-center md:text-left">
+              <h3 className=" italic DancingScript font-bold text-3xl mb-5 text-center md:text-left">
               {data.datoCmsPageDAccueil.titrev2}
 
               </h3>
@@ -134,7 +135,7 @@ import {
                 className="block m-auto md:m-0 mb-3  valeur "
                 src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois"
               />
-              <h3 className=" italic font-bold text-2xl mb-5 text-center md:text-left">
+              <h3 className=" italic DancingScript font-bold text-3xl mb-5 text-center md:text-left">
               {data.datoCmsPageDAccueil.titrev3}
 
               </h3>

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-onchange */
 import React from 'react';
 import { graphql } from 'gatsby';
-import {LayoutAtelier} from 'components/Layout/LayoutAtelier'
+import {LayoutAtelier} from '../../components/LayoutAtelier'
 import {
 
   ImageGallery,

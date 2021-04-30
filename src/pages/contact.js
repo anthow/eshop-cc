@@ -9,7 +9,7 @@ const ContactPage = () => {
         <img className="mb-10 mt-10 block w-1/2 md:w-1/6 m-auto" alt="contact" src="logo-seul.svg" />
 
         <div className="contact-form w-5/6 mb-20 w-max m-auto  md:w-full  ">
-        <h2 className="font-bold text-2xl text-center  mb-10">
+        <h2 className=" DancingScript font-bold text-5xl text-center  mb-10">
           Formulaire de contact
           </h2>
           <form className="contact-form w-5/6 mb-20 w-max m-auto   " method="post" action="#">
@@ -63,7 +63,7 @@ const ContactPage = () => {
             </label>
 
             <button
-              className="  block mt-2  p-2  w-auto m-auto  text-center valeur rounded-full text-white "
+              className="  block mt-2 text-2xl  p-2  w-auto m-auto  text-center valeur rounded-full text-white "
               name="button"
               type="button"
             >
@@ -74,10 +74,10 @@ const ContactPage = () => {
       </section>
       <section className="flex justify-center items-start  flex-wrap md:w-full  mt-10 mb-10">
       <article className=" md:w-5/12 mb-0 mx-5 ">
-      <h2 className="font-bold text-2xl text-left mt-20 md:mt-0 ">
+      <h2 className=" DancingScript font-bold text-4xl text-left mt-20 md:mt-0 ">
               Informations de contact
             </h2>
-          <h3 className="font-bold text-xl text-left mb-2">
+          <h3 className=" DancingScript font-bold text-3xl text-left mb-2">
               Nom de l'entreprise
             </h3>
           <p>adresse 1</p>
@@ -89,7 +89,7 @@ const ContactPage = () => {
           <p>numéro de compte en banque</p>
         </article>
         <article className=" md:w-5/12 mb-0 mx-5">
-          <h2 className="font-bold text-2xl text-center mt-20 md:mt-0 ">
+          <h2 className="font-bold DancingScript text-4xl text-center mt-20 md:mt-0 ">
 
             Réseaux sociaux
             </h2>

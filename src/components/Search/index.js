@@ -1,6 +1,4 @@
 import React from 'react';
-import { Input } from '../Input';
-import { SearchForm } from './styles';
 import { navigate, useLocation } from '@reach/router';
 import queryString from 'query-string';
 
@@ -14,27 +12,25 @@ export function Search() {
 
     if (c) {
       navigate(
-        `/all-products?s=${encodeURIComponent(
+        `/produits?s=${encodeURIComponent(
           searchTerm
         )}&c=${encodeURIComponent(c)}`
       );
     } else {
-      navigate(`/all-products?s=${encodeURIComponent(searchTerm)}`);
+      navigate(`/produits?s=${encodeURIComponent(searchTerm)}`);
     }
   };
 
   return (
-    <div className=" search-box flex flex-col search w-12/12 md:w-full  pr-4  py-4  box-content ">
-    <SearchForm  onSubmit={handleSubmit}>
-      <Input
+    <form className=" search-box  m-auto flex flex-col search w-12/12 md:w-full px-2  py-4  box-content "  onSubmit={handleSubmit}>
+      <input
         value={searchTerm}
         onChange={e => setSearchTerm(e.currentTarget.value)}
-        className="search-input"
+        className="search-input w-10/12 m-auto"
       />
-      <button class="search text-white p-2 mt-2 font-bold rounded-full">
+      <button class="search text-white p-2 mt-2 m-auto font-bold rounded-full w-1/2">
         Rechercher
       </button>
-    </SearchForm>
-    </div>
+    </form>
   );
 }

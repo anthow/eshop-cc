@@ -13,8 +13,8 @@ export function Cart() {
   }
   return (
     <CartWrapper>
-      <img className="w-6" src="panier.svg" />
-      <div className="md:text-white">
+      <img className="w-6" src="https://res.cloudinary.com/anthow/image/upload/v1619966614/Coccinelles%20et%20compagnies/panier_i9rkvq.svg" />
+      <div className="md:text-white text-sm font-regular mt-3 md:m-0">
         {totalQuantity} articles(s) / {checkout?.totalPrice || '0.00'}€
       </div>
     </CartWrapper>

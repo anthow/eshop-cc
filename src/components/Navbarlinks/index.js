@@ -9,6 +9,7 @@ const NavItem = styled(Link)`
   white-space: nowrap;
   transition: all 200ms ease-in;
   z-index: 999;
+  color:white;
   
   :after {
     position: absolute;
@@ -29,31 +30,33 @@ const NavItem = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    padding: 20px 0;
     font-size: 1.5rem;
     z-index: 6;
-    color: black;
+    color:#4A0D17;
+    font-family: 'Dancing Script' !important;
+    text-decoration: underline;
+
   }
 `
 const NavbarLinks = () => {
   return (
-    <div className=" menu-vert text-sm font-regular mt-3 md:m-0">
-    <NavItem  to="/all-products"
+    <div className="text-sm font-regular mt-3 mb-3 md:m-0">
+    <NavItem  to="/produits"
                 partiallyActive
                 activeClassName="font-bold "
-                className="block menu-vert p-1 md:px-4 md:inline-block">Boutique</NavItem>
-      <NavItem  to="/all-atelier"
+                className=" hover:opacity-80 md:text-base block underline mb-5 md:mb-0  md:p-1 md:px-4 md:inline-block">Boutique</NavItem>
+      <NavItem  to="/ateliers"
                 partiallyActive
                 activeClassName="font-bold "
-                className="block p-1 md:px-4 md:inline-block">Ateliers</NavItem>
+                className=" hover:opacity-80 block md:text-base underline mb-5 md:mb-0  md:p-1 md:px-4 md:inline-block">Ateliers</NavItem>
       <NavItem  to="/contact"
                 partiallyActive
                 activeClassName="font-bold "
-                className="block p-1 md:px-4 md:inline-block">Contact</NavItem>
+                className="hover:opacity-80 block md:text-base underline mb-5 md:mb-0  md:p-1 md:px-4 md:inline-block">Contact</NavItem>
       <NavItem  to="/all-products"
                 partiallyActive
                 activeClassName=" font-bold "
-                className="block p-1 md:px-4 md:inline-block">Blog</NavItem>
+                className="hover:opacity-80 block md:text-base underline  md:mb-0  md:p-1 md:px-4 md:inline-block">Blog</NavItem>
     </div>
   )
 }

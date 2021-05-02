@@ -6,14 +6,21 @@ import { AtelierTile } from 'components/AtelierTile';
 
 
 const Atelierpage = ({ data }) => (
+
+
+
+  
   <LayoutAtelier>
-      <section className='list-product flex flex-col md:flex-row content-center space-x-4 w-12/12'>
+  <section className='list-product mt-10 md:mt-0 flex flex-col md:flex-row content-center space-x-4 w-12/12'>
 <AsideAtelier />
 
-    <div className="product-list flex-grow py-10">
-    <div class=" flex flex-col md:flex-row">
+<div className="flex flex-col">
+<h2 className="DancingScript">Ateliers</h2>
+
     {data.allShopifyProduct.edges.map(({ node }) => (
-        <AtelierTile
+    <div className=" flex flex-col md:content-evenly md:flex-row">
+    <AtelierTile
+          className="mr-10"
           handle={node.handle}
           minPrice={node.priceRange.minVariantPrice.amount}
           description={node.description}
@@ -21,13 +28,12 @@ const Atelierpage = ({ data }) => (
           key={node.shopifyId}
           title={node.title}
         />
+        </div>
       ))}
-    </div>
           </div>
     </section>
     </LayoutAtelier>
 )
-export default Atelierpage
 
 
 export const query = graphql`
@@ -120,3 +126,4 @@ allShopifyCollection(
 }
 
   `
+export default Atelierpage

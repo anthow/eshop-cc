@@ -2,18 +2,38 @@ import React from 'react';
 import ProductContext from 'context/ProductContext';
 import { CategoryFilterItem } from './CategoryFilterItem';
 import { FiltersWrapper } from './styles';
+import { useStaticQuery, graphql } from "gatsby"
 
 export function Filters() {
-  const { collections } = React.useContext(ProductContext);
-
+  const data = useStaticQuery(graphql`
+  {
+    allShopifyCollection(
+      sort: {fields: title, order: ASC}
+      filter: {products: {elemMatch: {productType: {glob: "Boutique"}}}}
+    ) {
+      edges {
+        node {
+          products {
+            ...ShopifyProductFields
+            ...ProductTileFields
+          }
+          title
+          description
+          shopifyId
+        }
+      }
+    }
+  }
+`)
   return (
     <FiltersWrapper>
       <div className=' title-categorie DancingScript font-bold mb-6'>Types de produits</div>
-      {collections.map(collection => (
+      {data.allShopifyCollection.edges.map(({ node }) => (
+
         <CategoryFilterItem 
-          title={collection.title}
-          key={collection.shopifyId}
-          id={collection.shopifyId}
+          title={node.title}
+          key={node.shopifyId}  
+          id={node.shopifyId}
           className=' title-categorie font-bold text-center mb-6'></CategoryFilterItem>
     
       ))}

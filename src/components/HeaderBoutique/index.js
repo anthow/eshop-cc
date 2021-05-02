@@ -4,7 +4,7 @@ import Navbar from './navbar/navbar';
 
 export function HeaderBoutique({ siteTitle }) {
   return (
-    <header className=" text-white">
+    <header className="  text-white">
       <Helmet>
         <title> Coccinelles et compagnies</title>
       </Helmet>

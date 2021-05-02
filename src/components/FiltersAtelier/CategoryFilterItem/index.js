@@ -12,7 +12,7 @@ export function CategoryFilterItem({ title, id }) {
   const searchTerm = qs.s;
 
   const onClick = () => {
-    let navigateTo = '/all-products';
+    let navigateTo = '/ateliers';
 
     let newIds = [];
 

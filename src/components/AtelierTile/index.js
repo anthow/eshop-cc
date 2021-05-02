@@ -22,17 +22,17 @@ export function AtelierTile({
   handle,
 }) {
   return (
-    <div className=" mb-5 mr-5">
-      <StyledLink to={`/produits/${handle}`}>
+    <div className=" mb-5 mr-5 hover:opacity-80">
+      <StyledLink to={`/ateliers/${handle}`}>
       <div className="relative w-full pb-full">
       <StyledImg  fluid={imageFluid} />
       </div>
       <div className="bg-white">
-      <div className=" title-article h-10 md:h-20">
+      <div className=" title-article DancingScript h-10 md:h-20">
       <Title>{title}</Title>
       </div>
-      <div className=" text-l">
-      <Price>{parseFloat(minPrice).toFixed(2)} euros</Price>
+      <div className="mt-3 md:mt-0 couleuratelier text-l">
+      <Price>{parseFloat(minPrice).toFixed(2)} €</Price>
       </div>
       </div>
       </StyledLink>

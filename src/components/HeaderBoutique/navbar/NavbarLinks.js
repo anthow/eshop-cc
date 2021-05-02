@@ -29,31 +29,31 @@ const NavItem = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    padding: 10px 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     z-index: 6;
-    color: black;
+    color:#4A0D17;
+    font-family: 'Dancing Script' !important 
   }
 `
 const NavbarLinks = () => {
   return (
-    <div className="text-sm font-regular mt-3 md:m-0">
+    <div className="text-sm font-regular mt-3 mb-3 md:m-0">
     <NavItem  to="/all-products"
                 partiallyActive
                 activeClassName="font-bold "
-                className="block p-1 md:px-4 md:inline-block">Boutique</NavItem>
+                className="block m md:px-4 md:inline-block">Boutique</NavItem>
       <NavItem  to="/all-atelier"
                 partiallyActive
                 activeClassName="font-bold "
-                className="block p-1 md:px-4 md:inline-block">Ateliers</NavItem>
+                className="block p-2 md:px-4 md:inline-block">Ateliers</NavItem>
       <NavItem  to="/contact"
                 partiallyActive
                 activeClassName="font-bold "
-                className="block p-1 md:px-4 md:inline-block">Contact</NavItem>
+                className="block p-2 md:px-4 md:inline-block">Contact</NavItem>
       <NavItem  to="/blog"
                 partiallyActive
                 activeClassName=" font-bold "
-                className="block p-1 md:px-4 md:inline-block">Blog</NavItem>
+                className="block md:px-4 md:inline-block">Blog</NavItem>
     </div>
   )
 }

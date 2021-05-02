@@ -15,7 +15,6 @@ import {
         <div className="head w-10/12   m-auto mt-10 md: mt-0 py-10 md:max-w-screen-lg">
           <img className="mb-10 hidden md:block w-6/6 md:w-4/6 m-auto" alt="accueil" src={data.datoCmsPageDAccueil.imageConcept.url}/>
           <img className="mb-10 md:hidden block w-6/6 md:w-4/6 m-auto" alt="accueil" src={data.datoCmsPageDAccueil.imageConceptSmartphone.url}/>
-          <h2 className=" DancingScript italic text-5xl text-left mb-5">Notre concept</h2>
           <p className="text-left mb-10">
             {data.datoCmsPageDAccueil.texteConcept}
           </p>
@@ -23,60 +22,45 @@ import {
         <div className="content">
           <section className="flex justify-center mb-10 max-w-max  flex-wrap">
             <article className="  md:w-1/2 mb-0 m-auto w-12/12 md:mb-3">
-  <div className="rowes">
-                <div className="row">
-                <img
-                src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
-              </div>
-              <div className="row">
-                <img
-                src={data.datoCmsPageDAccueil.imageV2.url}  alt="valeur-1" />
-              </div>
-              <div className="row">
-                <img
-                src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois" />
-              </div>
-              <div className="row">
-                <img
-                src={data.datoCmsPageDAccueil.imageV2.url}  alt="valeur-1" />
-              </div>
-              </div>
-              <div className="concept-atelier  p-10  mb-5">
+  
+              <div className="concept-atelier  p-10 ">
                 <h2 className=" DancingScript italic font-bold text-4xl text-left mb-5"> Boutique</h2>
                 <p className="p-2 text-left mb-3">
                 {data.datoCmsPageDAccueil.texteBoutique}
 
                 </p>
                 <button
-                className=" italic block m-auto p-2 text-2xl  w-auto  text-center atelier rounded-full text-white "
+                className="  hover:opacity-80 italic block m-auto p-2 text-2xl  w-auto  text-center atelier rounded-full text-white "
                 name="button"
                 type="button"
+              ><a                 href="/all-products"
               >
                 Boutique
+                </a>
               </button>
               </div>
-         
-            </article>
-            <article className=" md:w-1/2 md: mb-0 m-auto w-12/12 mb-3">
-            <div className="rowes">
-                <div className="row">
+              <div className="rowes concept-atelier-background ">
+                <div className="row shadowbottom">
                 <img
                 src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
               </div>
-              <div className="row">
-                <img
-                src={data.datoCmsPageDAccueil.imageV2.url}  alt="valeur-1" />
-              </div>
-              <div className="row">
+              <div className="row shadowbottom">
                 <img
                 src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois" />
-              </div>
-              <div className="row">
+                </div>
+              <div className="row shadowbottom">
                 <img
-                src={data.datoCmsPageDAccueil.imageV2.url}  alt="valeur-1" />
+                src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
+                </div>
+              <div className="row shadowbottom">
+                <img
+                src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois" />
+                </div>
               </div>
-              </div>
-              <div className="concept-boutique p-10  mb-5">
+            </article>
+            <article className=" md:w-1/2 md: mb-0 m-auto w-12/12 mb-3">
+    
+              <div className="concept-boutique p-8">
                 <h2 className="DancingScript italic font-bold text-4xl text-left mb-5">
                   {" "}
                   Ateliers / Formations{" "}
@@ -86,19 +70,38 @@ import {
 
                 </p>
                 <button
-                className="  italic block m-auto p-2  w-auto  text-2xl text-center boutique rounded-full text-white w-16"
+                className="  hover:opacity-80 italic block m-auto p-2  w-auto  text-2xl text-center boutique rounded-full text-white w-16"
                 name="button"
                 type="button"
+              ><a href="/all-atelier"
               >
                 Ateliers
+                </a>
               </button>
               </div>
-              
+              <div className="rowes">
+                <div className="row shadowbottom">
+                <img
+                src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
+              </div>
+              <div className="row shadowbottom">
+                <img
+                src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois" />
+                </div>
+              <div className="row shadowbottom">
+                <img
+                src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
+                </div>
+              <div className="row shadowbottom">
+                <img
+                src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois" />
+                </div>
+              </div>
             </article>
           </section>
           <div className="w-11/12  m-auto mt-10 md:mt-0 py-10 md:max-w-screen-lg">
 
-          <h2 className="  italic text-5xl text-left DancingScript   mb-10">Nos valeurs</h2>
+          <h2 className="  italic text-5xl text-left DancingScript   mb-10"> Mes fils rouges</h2>
           <section className="flex justify-center flex-wrap mb-20">
             <article className="md:w-1/3 md: mb-0 m-auto w-11/12 mb-3">
               <img

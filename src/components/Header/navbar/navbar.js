@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from 'gatsby'
 import styled from "styled-components"
-import NavbarLinks from "./NavbarLinks"
+import NavbarLinks from "../../Navbarlinks"
 import { Cart } from '../../Cart';
 
 
@@ -41,14 +41,14 @@ const Navbox = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 99%;
     justify-content: flex-start;
     padding-top: 1vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
     top: 12vh;
     left: ${props => (props.open ? "-100%" : "0")};
-    height:100vh;
+    height:200vh;
   }
 `
 
@@ -69,6 +69,7 @@ const Hamburger = styled.div`
     content: "";
     position: absolute;
     transition: all 0.3s linear;
+    
   }
 
   ::before {
@@ -88,29 +89,29 @@ const Navbar = () => {
 
   return (
     <Navigation classname="text-white">
-      <title> Coccinelles et compagnies</title>
+      <title> Coccinelles et compagnie</title>
       <div className="flex flex-wrap container justify-between mx-1">
 
       <Link to="/" className="flex items-center no-underline">
-            <span className=" text-xl md:text-4xl md:mb-1 DancingScript italic font-bold">
-            Coccinelles et compagnies
+            <span className=" text-xl md:text-4xl pl-5 md:mb-1 DancingScript italic font-bold">
+            Coccinelles et compagnie
             </span>
             </Link>
         <Toggle
           navbarOpen={navbarOpen}
           onClick={() => setNavbarOpen(!navbarOpen)}
         >
-          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+          {navbarOpen ? <Hamburger open /> : <Hamburger/>}
         </Toggle>
         {navbarOpen ? (
           <Navbox>
-            <img className='w-3/6 mx-auto mb-5 ' alt="accueil" src="logo-titres.svg" />
+            <img className='w-3/6 mx-auto mt-5 mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966614/Coccinelles%20et%20compagnies/logo-titres_tlfbby.svg" />
             <Cart className="gris" />
-            <NavbarLinks />
+            <NavbarLinks className="menu-vert" />
           </Navbox>
         ) : (
           <Navbox open>
-            <NavbarLinks />
+            <NavbarLinks className="menu-vert" />
             <Cart className="gris" />
           </Navbox>
         )}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Filters,  } from '../../../Filters';
+import { Filters,  } from '../../../FiltersAtelier';
 import { Search } from '../../../SearchAtelier'
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';

@@ -2,7 +2,7 @@ import React from 'react';
 //import { ProductQuantityAdderWrapper } from './styles';
 import CartContext from 'context/CartContext';
 
-export function ProductQuantityAdder({ variantId, available }) {
+export function AtelierQuantityAdder({ variantId, available }) {
   const [quantity, setQuantity] = React.useState(1);
   const { updateLineItem } = React.useContext(CartContext);
 
@@ -26,9 +26,9 @@ export function ProductQuantityAdder({ variantId, available }) {
           step="1"
           value={quantity}
           onChange={handleQuantityChange}
-          className="bg-transparent border-boutique  w-32 rounded p-1"
+          className="bg-transparent border-atelier  w-32 rounded p-1"
         />
-        <button type="submit" className="  hover:opacity-80 block mt-5 p-2 text-2xl w-auto buy-boutique whitespace-nowrap rounded-full text-white "
+        <button type="submit" className="  hover:opacity-80 block mt-5 p-2 text-2xl w-auto bgorange whitespace-nowrap rounded-full text-white "
  disabled={!available} fullWidth>
           Ajouter au panier
         </button>

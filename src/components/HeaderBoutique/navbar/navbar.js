@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from 'gatsby'
 import styled from "styled-components"
-import NavbarLinks from "./NavbarLinks"
+import NavbarLinks from "../../Navbarlinks"
 import { Cart } from '../../Cart';
 import { Aside } from "./aside" 
 
@@ -9,7 +9,8 @@ const Navigation = styled.nav`
   display: flex;
   position: relative;
   z-index: 999;
-  background-color:#57aab0;
+  background-color: #008492
+  ;
 
   @media (max-width: 768px) {
     position: fixed;
@@ -18,7 +19,8 @@ const Navigation = styled.nav`
     left: 0;
     right: 0;
     left: 0;
-    background-color: #57aab0;  }
+    background-color:   #008492
+    ;  }
 `
 
 const Toggle = styled.div`
@@ -95,8 +97,8 @@ const Navbar = () => {
                       <div className="flex flex-wrap container justify-between mx-1">
               
             <Link to="/" className="flex items-center no-underline">
-            <span className=" text-xl md:text-4xl md:mb-1 DancingScript italic font-bold">
-            Coccinelles et compagnies
+            <span className=" text-xl md:text-4xl pl-5 md:mb-1 DancingScript italic font-bold">
+            Coccinelles et compagnie
             </span>
           </Link> 
             <Toggle
@@ -107,7 +109,7 @@ const Navbar = () => {
             </Toggle>
             {navbarOpen ? (
                 <Navbox className=" overflow-scroll h-auto">
-                            <img className='w-3/6 mx-auto mb-5 ' alt="accueil" src="logo-boutique.svg"/>
+                            <img className='w-3/6 mx-auto mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966610/Coccinelles%20et%20compagnies/logo-boutique_bgsvny.svg"/>
 
                                       <Cart className="gris" />
                     <NavbarLinks />

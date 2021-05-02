@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from 'gatsby'
 import styled from "styled-components"
-import NavbarLinks from "./NavbarLinks"
+import NavbarLinks from "../../Navbarlinks"
 import { Cart } from '../../Cart';
 import { Aside } from './aside'
 
@@ -51,9 +51,8 @@ const Navbox = styled.div`
     width: 99%;
     top: 12vh;
     left: 0px;
-    max-height: 100%;
-    overflow-y:scroll;
     overflow-x:hidden;
+    height:200vh;
     left: ${props => (props.open ? "-100%" : "0")};
 `
 
@@ -78,7 +77,7 @@ const Hamburger = styled.div`
 
   ::before {
     transform: ${props =>
-        props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+    props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
@@ -89,41 +88,41 @@ const Hamburger = styled.div`
   }
 `
 const Navbar = () => {
-    const [navbarOpen, setNavbarOpen] = useState(false)
+  const [navbarOpen, setNavbarOpen] = useState(false)
 
-    return (
-        <Navigation classname="text-white">
-                      <title> Coccinelles et compagnies</title>
-        <div className="flex flex-wrap container justify-between mx-1">
-              
-            <Link to="/" className="flex items-center no-underline">
-            <span className=" text-xl md:text-4xl md:mb-1 DancingScript italic font-bold">
-            Coccinelles et compagnies
+  return (
+    <Navigation classname="text-white">
+      <title> Coccinelles et compagnies</title>
+      <div className="flex flex-wrap container justify-between mx-1">
+
+        <Link to="/" className="flex items-center no-underline">
+          <span className=" text-xl md:text-4xl pl-5 md:mb-1 DancingScript italic font-bold">
+            Coccinelles et compagnie
             </span>
-          </Link> 
-            <Toggle
-                navbarOpen={navbarOpen}
-                onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-                {navbarOpen ? <Hamburger open /> : <Hamburger />}
-            </Toggle>
-            {navbarOpen ? (
-                <Navbox>
-                                              <img className='w-3/6 mx-auto mb-5 ' alt="accueil" src="logo-atelier.svg"/>
+        </Link>
+        <Toggle
+          navbarOpen={navbarOpen}
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        </Toggle>
+        {navbarOpen ? (
+          <Navbox>
+            <img className='w-3/6 mx-auto mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966607/Coccinelles%20et%20compagnies/logo-atelier_yyf8ko.svg" />
 
-                                      <Cart className="gris" />
-                    <NavbarLinks />
-                    <Aside />
-                </Navbox>
-            ) : (
-                <Navbox open>
-                    <NavbarLinks />
-                    <Cart className="gris" />
-                </Navbox>
-            )}
-                  </div>  
-        </Navigation>
-    )
+            <Cart className="gris" />
+            <NavbarLinks />
+            <Aside />
+          </Navbox>
+        ) : (
+          <Navbox open>
+            <NavbarLinks />
+            <Cart className="gris" />
+          </Navbox>
+        )}
+      </div>
+    </Navigation>
+  )
 }
 
 export default Navbar

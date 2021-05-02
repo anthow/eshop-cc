@@ -1,5 +1,5 @@
 import React from 'react';
-import { Filters,  } from '../Filters';
+import { Filters  } from '../FiltersAtelier';
 import { Search } from '../SearchAtelier'
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';
@@ -29,7 +29,7 @@ export function AsideAtelier(){
       });
     }
   
-    const filterByCategory = product => {
+    const filterByCategory = product => { 
       if (Object.keys(selectedCollectionIdsMap).length) {
         for (let key in selectedCollectionIdsMap) {
           if (collectionProductMap[key]?.[product.shopifyId]) {
@@ -56,10 +56,10 @@ export function AsideAtelier(){
 
 
     return( 
-        <aside className='list-product   text-left hidden md:flex  md:flex-col content-center  pr-4 '>
+      <aside className=' text-left hidden md:flex   md:flex-col content-center  pr-4 '>
           
-          <img className='w-4/6 mx-auto mb-5 mt-3 ' alt="accueil" src="logo-atelier.svg"/>
-<div className="mb-2">
+          <img className='w-5/6 mx-auto mb-5 mt-3 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966607/Coccinelles%20et%20compagnies/logo-atelier_yyf8ko.svg"/>
+          <div className="mb-2 align-center">
 <Search />
 </div>
 <div className="pl-2">
@@ -68,14 +68,13 @@ export function AsideAtelier(){
           Recherche pour: <strong>'{searchTerm}'</strong>
         </p>
       )}
-        <Filters />
+    <Filters />
         {!filteredProducts.length && (
-          <div>
-            <h3>
-              <span>Aucun article trouvé</span>
+          <div className="text-center mt-5">
+              <p className="">aucun article trouvé pour</p>
               &nbsp;
-              <strong>'{searchTerm}'</strong>
-            </h3>
+              <strong className="title-categorie">'{searchTerm}'</strong>
+            
            
           </div>
         )}

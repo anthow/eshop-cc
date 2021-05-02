@@ -62,15 +62,18 @@ export default function AllProducts() {
         description="Coccinelles et compagnies"
         title="Tout les produits"
       />
-  <section className='list-product flex flex-col md:flex-row content-center space-x-4 w-12/12'>
+  <section className='list-product mt-10 md:mt-0 flex flex-col md:flex-row content-center space-x-4 w-12/12'>
 
 <Aside />
-
+<div className="flex flex-col">
+<h2 className="DancingScript">produits</h2>
         {!!filteredProducts.length && (
-  <div className="product-list flex-grow py-10">
+  <div className="product-list flex-grow ">
+    
   <ProductsGrid products={filteredProducts} />
           </div>
         )}
+        </div>
       </section>
     </LayoutBoutique>
   );

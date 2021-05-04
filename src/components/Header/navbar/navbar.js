@@ -33,6 +33,9 @@ const Toggle = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling: touch;
   }
 `
 
@@ -52,10 +55,7 @@ const Navbox = styled.div`
     width: 100%;
     top: 12vh;
     left: 0px;
-    max-height: 100%;
-    overflow-y:auto;
-    overflow-x:hidden;
-    -webkit-overflow-scrolling: touch;
+    height: calc(100% + 1px);    
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `

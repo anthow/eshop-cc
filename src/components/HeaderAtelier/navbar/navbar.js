@@ -113,6 +113,8 @@ const Navbar = () => {
             <Cart className="gris m-b5" />
             <NavbarLinks />
             <Aside />
+            <p>coucou</p>
+
           </Navbox>
         ) : (
           <Navbox open>

@@ -12,6 +12,7 @@ import {  Price } from './styles';
 import CartContext from 'context/CartContext';
 import { navigate, useLocation } from '@reach/router';
 import queryString from 'query-string';
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
 export const query = graphql`
   query AtelierQuery($shopifyId: String) {
@@ -21,7 +22,7 @@ export const query = graphql`
   }
 `;
 
-export default function AtelierTemplate(props) {
+export default function AtelierTemplate(props,location) {
   const { getProductById } = React.useContext(CartContext);
   const [product, setProduct] = React.useState(null);
   const [selectedVariant, setSelectedVariant] = React.useState(null);
@@ -61,6 +62,8 @@ export default function AtelierTemplate(props) {
       />
       <div className="flex mt-20 flex-col md:flex-row content-center m-auto w-2/3 md:mt-10" >
       <div>
+      <Breadcrumb  location={location} crumbLabel={props.data.shopifyProduct.title} />
+
           <ImageGallery
             selectedVariantImageId={selectedVariant?.image.id}
             images={props.data.shopifyProduct.images}

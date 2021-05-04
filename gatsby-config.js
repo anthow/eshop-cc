@@ -22,6 +22,9 @@ module.exports = {
     `gatsby-optional-chaining`,
     'gatsby-plugin-postcss',
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
 
     {
       resolve: `gatsby-source-datocms`,
@@ -86,6 +89,21 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        // defaultCrumb: optional To create a default crumb
+        // see Click Tracking default crumb example below
+        defaultCrumb: {
+          location: {
+            pathname: "/",
+          },
+          crumbLabel: "Accueil",
+          crumbSeparator: " / ",
+        },
+        
+      }
     },
   ],
 };

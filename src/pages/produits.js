@@ -6,10 +6,11 @@ import ProductContext from 'context/ProductContext';
 //import styled from 'styled-components';
 import queryString from 'query-string';
 import { useLocation } from '@reach/router';
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
 
 
-export default function AllProducts() {
+export default function AllProducts({location}) {
   const { products, collections } = React.useContext(ProductContext);
   const collectionProductMap = {};
   const { search } = useLocation();
@@ -66,7 +67,9 @@ export default function AllProducts() {
 
 <Aside />
 <div className="flex flex-col">
-<h2 className="DancingScript">produits</h2>
+<Breadcrumb location={location} crumbLabel="Boutique" />
+
+<h2 className="DancingScript">Produits</h2>
         {!!filteredProducts.length && (
   <div className="product-list flex-grow ">
     

@@ -12,9 +12,9 @@ export function Cart() {
     });
   }
   return (
-    <CartWrapper>
-      <img className="w-6" src="https://res.cloudinary.com/anthow/image/upload/v1619966614/Coccinelles%20et%20compagnies/panier_i9rkvq.svg" />
-      <div className="md:text-white text-sm font-regular mt-3 md:m-0">
+    <CartWrapper className="mb-3 md:mb-0">
+      <img className="w-6" src="https://res.cloudinary.com/anthow/image/upload/v1620127303/Coccinelles%20et%20compagnies/panier-rond-blc_hszoij.svg" />
+      <div className="md:text-white text-sm font-regular mt-3 mb-5 md:m-0">
         {totalQuantity} articles(s) / {checkout?.totalPrice || '0.00'}€
       </div>
     </CartWrapper>

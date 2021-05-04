@@ -47,12 +47,13 @@ const Navbox = styled.div`
     padding-top: 1vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    width: 99%;
+    width: 100%;
     top: 12vh;
     left: 0px;
     max-height: 100%;
-    overflow-y:scroll;
+    overflow-y:auto;
     overflow-x:hidden;
+    -webkit-overflow-scrolling: touch;
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `

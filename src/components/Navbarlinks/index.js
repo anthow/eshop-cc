@@ -30,33 +30,36 @@ const NavItem = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 2rem;
     z-index: 6;
     color:#4A0D17;
     font-family: 'Dancing Script' !important;
-    text-decoration: underline;
 
   }
 `
 const NavbarLinks = () => {
   return (
-    <div className="text-sm font-regular mt-3 mb-3 md:m-0">
+    <div className="text-base font-regular mt-3 mb-3 md:m-0">
     <NavItem  to="/produits"
                 partiallyActive
-                activeClassName="font-bold "
-                className=" hover:opacity-80 md:text-base block underline mb-5 md:mb-0  md:p-1 md:px-4 md:inline-block">Boutique</NavItem>
+                activeClassName="font-bold underline "
+                className=" hover:opacity-80 block  mb-6 md:mb-0  md:p-1 md:px-4 md:inline-block">
+                  Boutique</NavItem>
       <NavItem  to="/ateliers"
                 partiallyActive
-                activeClassName="font-bold "
-                className=" hover:opacity-80 block md:text-base underline mb-5 md:mb-0  md:p-1 md:px-4 md:inline-block">Ateliers</NavItem>
+                activeClassName="font-bold underline "
+                className=" hover:opacity-80 block  mb-6 md:mb-0  md:p-1 md:px-4 md:inline-block">
+                  Ateliers</NavItem>
       <NavItem  to="/contact"
                 partiallyActive
-                activeClassName="font-bold "
-                className="hover:opacity-80 block md:text-base underline mb-5 md:mb-0  md:p-1 md:px-4 md:inline-block">Contact</NavItem>
+                activeClassName="font-bold underline "
+                className=" hover:opacity-80 block  mb-6 md:mb-0  md:p-1 md:px-4 md:inline-block">
+                  Contact</NavItem>
       <NavItem  to="/all-products"
                 partiallyActive
-                activeClassName=" font-bold "
-                className="hover:opacity-80 block md:text-base underline  md:mb-0  md:p-1 md:px-4 md:inline-block">Blog</NavItem>
+                activeClassName="font-bold underline "
+                className=" hover:opacity-80 block  mb-5 md:mb-0  md:p-1 md:px-4 md:inline-block">
+                  Blog</NavItem>
     </div>
   )
 }

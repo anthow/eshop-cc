@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'gatsby-image';
 import { ImageGalleryWrapper } from './styles';
 import ImageThumbnail from './ImageThumbnail';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export function ImageGallery({ selectedVariantImageId, images }) {
   const [activeImageThumbnail, setActiveImageThumbnail] = React.useState(
@@ -20,11 +19,12 @@ export function ImageGallery({ selectedVariantImageId, images }) {
   };
 
   return (
-    <ImageGalleryWrapper>
-      <div>
-        <GatsbyImage image={activeImageThumbnail.localFile.childImageSharp.gatsbyImageData} />
+    <div className=" flex flex-col">
+      <div className="w-11/12 md: w-full mb-2" >
+        <Image
+        fluid={activeImageThumbnail.localFile.childImageSharp.fluid} />
       </div>
-      <div>
+      <div className="flex">
         {images.map(image => {
           return (
             <ImageThumbnail
@@ -36,6 +36,6 @@ export function ImageGallery({ selectedVariantImageId, images }) {
           );
         })}
       </div>
-    </ImageGalleryWrapper>
+    </div>
   );
 }

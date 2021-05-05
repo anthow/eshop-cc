@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import styled from "styled-components"
 import NavbarLinks from "../../Navbarlinks"
 import { Cart } from '../../Cart';
-import { Aside } from "./aside" 
 
+import { Search } from "../../Search"
 const Navigation = styled.nav`
   display: flex;
   position: relative;
@@ -20,9 +20,6 @@ const Navigation = styled.nav`
     right: 0;
     left: 0;
     background-color:   #008492
-    overflow-y:auto;
-    overflow-x:hidden;
-    -webkit-overflow-scrolling: touch;
     ;  }
 `
 
@@ -50,10 +47,12 @@ const Navbox = styled.div`
     padding-top: 1vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    width: 100%;
+    width: 99%;
     top: 12vh;
     left: 0px;
-    height: calc(100% + 1px);
+    max-height: 100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `
@@ -79,7 +78,7 @@ const Hamburger = styled.div`
 
   ::before {
     transform: ${props =>
-        props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+    props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
@@ -89,44 +88,43 @@ const Hamburger = styled.div`
     top: 10px;
   }
 `
-const Navbar = () => {
-    const [navbarOpen, setNavbarOpen] = useState(false)
 
-    return (
-        <Navigation classname="text-white">
-                      <title> Coccinelles et compagnies</title>
-                      <div className="flex flex-wrap container justify-between mx-1">
-              
-            <Link to="/" className="flex items-center no-underline">
-            <span className=" text-xl md:text-4xl pl-5 md:mb-1 DancingScript italic font-bold">
+const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
+
+  return (
+    <Navigation classname="text-white">
+      <title> Coccinelles et compagnies</title>
+      <div className="flex flex-wrap container justify-between mx-1">
+
+        <Link to="/" className="flex items-center no-underline">
+          <span className=" text-xl md:text-4xl pl-5 md:mb-1 DancingScript italic font-bold">
             Coccinelles et compagnie
             </span>
-          </Link> 
-            <Toggle
-                navbarOpen={navbarOpen}
-                onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-                {navbarOpen ? <Hamburger open /> : <Hamburger />}
-            </Toggle>
-            {navbarOpen ? (
-                <Navbox className=" overflow-scroll h-auto">
-                            <img className='w-3/6 mx-auto mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966610/Coccinelles%20et%20compagnies/logo-boutique_bgsvny.svg"/>
+        </Link>
+        <Toggle
+          navbarOpen={navbarOpen}
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        </Toggle>
+        {navbarOpen ? (
+          <Navbox className=" overflow-scroll flex flex-col  items-start content-start h-auto">
+            <img className='w-3/6 mx-auto mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966610/Coccinelles%20et%20compagnies/logo-boutique_bgsvny.svg" />
+            <Cart className="gris" />
+            <NavbarLinks />
+            <Search />
+          </Navbox>
+        ) : (
+          <Navbox open>
 
-                                      <Cart className="gris" />
-                    <NavbarLinks />
-                    <Aside />
-                    <p>coucou </p>
-                </Navbox>
-            ) : (
-                <Navbox open>
-                  
-                    <NavbarLinks />
-                    <Cart className="gris" />
-                </Navbox>
-            )}
-                  </div>  
-        </Navigation>
-    )
+            <NavbarLinks />
+            <Cart className="gris" />
+          </Navbox>
+        )}
+      </div>
+    </Navigation>
+  )
 }
 
 export default Navbar

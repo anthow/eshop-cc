@@ -8,12 +8,8 @@ import { Cart } from '../../Cart';
 const Navigation = styled.nav`
 display: flex;
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  
+  z-index: 999;
+
   @media (max-width: 768px) {
     position: fixed;
     height: 12vh;
@@ -33,9 +29,6 @@ const Toggle = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    overflow-y:auto;
-    overflow-x:hidden;
-    -webkit-overflow-scrolling: touch;
   }
 `
 
@@ -46,17 +39,16 @@ const Navbox = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    position: fixed;
     flex-direction: column;
+    position: fixed;
+    width: 99%;
     justify-content: flex-start;
     padding-top: 1vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    width: 100%;
     top: 12vh;
-    left: 0px;
-    height: calc(100% + 1px);    
     left: ${props => (props.open ? "-100%" : "0")};
+    height:200vh;
   }
 `
 

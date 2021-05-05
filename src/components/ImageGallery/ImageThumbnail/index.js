@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'gatsby-image';
-import { ImageThumbnailWrapper } from './styles';
 
 export default function ImageThumbnail({ isActive, onClick, image }) {
   const handleClick = () => {
@@ -8,8 +7,8 @@ export default function ImageThumbnail({ isActive, onClick, image }) {
   };
 
   return (
-    <ImageThumbnailWrapper onClick={handleClick} isActive={isActive}>
-      <Image className="produit-image-thumb" fluid={image.localFile.childImageSharp.fluid} />
-    </ImageThumbnailWrapper>
+    <div className="mr-2" onClick={handleClick} isActive={isActive}>
+      <Image className="produit-image-thumb block w-2" fluid={image.localFile.childImageSharp.fluid} />
+    </div>
   );
 }

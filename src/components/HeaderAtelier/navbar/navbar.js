@@ -110,11 +110,8 @@ const Navbar = () => {
           <Navbox>
             <img className='w-3/6 mx-auto mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966607/Coccinelles%20et%20compagnies/logo-atelier_yyf8ko.svg" />
 
-            <Cart className="gris m-b5" />
+            <Cart className="gris" />
             <NavbarLinks />
-            <Aside />
-            <p>coucou</p>
-
           </Navbox>
         ) : (
           <Navbox open>

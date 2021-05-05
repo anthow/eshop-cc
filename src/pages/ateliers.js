@@ -2,19 +2,19 @@ import React from "react"
 import {  graphql } from "gatsby"
 import { LayoutAtelier } from 'components/LayoutAtelier'
 import { AsideAtelier } from 'components/asideAtelier'
-import { AtelierTile } from 'components/AtelierTile'
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import { AtelierTile } from 'components/AtelierTile';
 
-const Atelierpage = ({ data,location })  => (
+
+const Atelierpage = ({ data }) => (
+
 
 
   
   <LayoutAtelier>
   <section className='list-product mt-10 md:mt-0 flex flex-col md:flex-row content-center space-x-4 w-12/12'>
 <AsideAtelier />
-<div className="flex flex-col">
-<Breadcrumb className="w-full-p10" location={location} crumbLabel="Ateliers" />
 
+<div className="flex flex-col">
 <h2 className="DancingScript">Ateliers</h2>
 
     {data.allShopifyProduct.edges.map(({ node }) => (

@@ -17,7 +17,8 @@ export function ProductQuantityAdder({ variantId, available }) {
 
   return (
     <>
-      <p className="mb-3 mt-3 title-article text-2xl font-bold DancingScript  ">Quantité</p>
+    <div className="flex flex-col">
+      <p className="mb-3 title-article text-2xl font-bold DancingScript  ">Quantité</p>
       <form onSubmit={handleSubmit}>
         <input 
           disabled={!available}
@@ -26,13 +27,14 @@ export function ProductQuantityAdder({ variantId, available }) {
           step="1"
           value={quantity}
           onChange={handleQuantityChange}
-          className="bg-transparent border-boutique  w-32 rounded p-1"
+          className="bg-transparent border-boutique h-10  w-32 rounded p-1"
         />
-        <button type="submit" className="  hover:opacity-80 block mt-5 p-2 text-2xl w-auto buy-boutique whitespace-nowrap rounded-full text-white "
+        <button type="submit" className="  hover:opacity-80 block mt-16 p-2 text-2xl w-auto buy-boutique whitespace-nowrap rounded-full text-white "
  disabled={!available} fullWidth>
           Ajouter au panier
         </button>
       </form>
+      </div>
       </>
   );
 }

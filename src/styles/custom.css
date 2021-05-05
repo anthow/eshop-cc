@@ -1,3 +1,11 @@
+.position-fixed{
+  z-index: 999;
+  background-color: rgb(241, 241, 241);
+}
+
+.border-categorie{
+  border-bottom: 1px solid #EEE4E4;
+}
 
 .border-boutique{
   border: 1px solid #008492;
@@ -279,6 +287,12 @@ h3{
         
         }
 
+        .border-categorie{
+          border-bottom: solid 1px black;
+          min-height: auto;
+      
+        
+        }
 
 .menu-vert a
 {text-decoration: underline;

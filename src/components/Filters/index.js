@@ -34,7 +34,7 @@ export function Filters() {
           title={node.title}
           key={node.shopifyId}  
           id={node.shopifyId}
-          className=' title-categorie font-bold text-center mb-6'></CategoryFilterItem>
+          className=' title-categorie font-bold text-centermb-6'></CategoryFilterItem>
     
       ))}
 

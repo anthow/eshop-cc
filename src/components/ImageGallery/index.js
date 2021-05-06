@@ -24,7 +24,7 @@ export function ImageGallery({ selectedVariantImageId, images }) {
         <Image
         fluid={activeImageThumbnail.localFile.childImageSharp.fluid} />
       </div>
-      <div className="flex">
+      <div className="flex flex'row flex-wrap">
         {images.map(image => {
           return (
             <ImageThumbnail

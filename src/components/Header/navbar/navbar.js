@@ -105,7 +105,9 @@ const Navbar = () => {
         </Toggle>
         {navbarOpen ? (
           <Navbox>
-            <img className='w-3/6 mx-auto mt-5 mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966614/Coccinelles%20et%20compagnies/logo-titres_tlfbby.svg" />
+            <img className='w-3/6 md:hidden mx-auto mt-5 mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1619966614/Coccinelles%20et%20compagnies/logo-titres_tlfbby.svg" />
+            <img className='w-3/6 hidden md:block mx-auto mt-5 mb-5 ' alt="accueil" src="https://res.cloudinary.com/anthow/image/upload/v1620127251/Coccinelles%20et%20compagnies/panier-rond-black_rxrd5c.svg" />
+
             <Cart className="gris" />
             <NavbarLinks className="menu-vert" />
           </Navbox>

@@ -11,9 +11,7 @@ const Atelierpage = ({ data }) => (
 
   
   <LayoutAtelier>
-  <section className='list-product mt-10 md:mt-0 flex flex-col md:flex-row content-center space-x-4 w-12/12'>
-<AsideAtelier />
-
+  <section className='list-product mt-10 md:mt-0 flex flex-col md:flex-row content-center space-x-4 w-9/12'>
 <div className="flex flex-col">
 <h2 className="DancingScript">Ateliers</h2>
 

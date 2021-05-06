@@ -1,5 +1,4 @@
 import React from 'react';
-import { Title, Price } from './styles';
 import Img from 'gatsby-image';
 import { StyledLink } from '../StyledLink';
 import styled from "styled-components"
@@ -10,7 +9,6 @@ const StyledImg = styled(Img)`
   width: auto; 
   }
   display: block;
-  margin: 0 auto;
   width: 250px;
   height:250px;
 `
@@ -24,15 +22,12 @@ export function ProductTile({
   return (
     <div className=" mb-5 mr-5 hover:opacity-80">
       <StyledLink to={`/produits/${handle}`}>
-      <div className="relative w-full pb-full ">
       <StyledImg  fluid={imageFluid} />
-      </div>
       <div className="bg-white">
-      <div className=" title-article DancingScript h-10 md:h-20">
-      <Title>{title}</Title>
+      <div className=" title-article DancingScript text-2xl md:text-xl  h-auto  md:mb-2">
+      {title}
       </div>
-      <div className=" mt-3 md:mt-0 couleurboutique text-l">
-      <Price className=" couleurboutique">{parseFloat(minPrice).toFixed(2)}€</Price>
+      <div className=" mt-3 md:mt-0 md:m-auto  couleurboutique text-l">{parseFloat(minPrice).toFixed(2)}€
       </div>
       </div>
       </StyledLink>

@@ -11,7 +11,8 @@ const query = graphql`
     }
   }
   {
-    allShopifyProduct(filter: {productType: {eq: "Boutique"}    }) {
+    allShopifyProduct
+    (sort: {fields: publishedAt, order: DESC} filter: {productType: {eq: "Boutique"},availableForSale: {in: true}}) {
       edges {
       node {
         images {
@@ -74,8 +75,8 @@ const query = graphql`
 
   allShopifyCollection(
     sort: {fields: title, order: ASC}
-    filter: {products: {elemMatch: {productType: {glob: "Boutique"}}}}
-  ) {
+    filter: {products: {elemMatch: {productType: {glob: "Boutique"}, availableForSale: {eq: true}}}}
+    ) {
     edges {
       node {
         products {

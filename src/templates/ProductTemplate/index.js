@@ -1,12 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { LayoutBoutique } from 'components/LayoutBoutique'
-import {
-
-  ImageGallery,
-  ProductQuantityAdder,
-  SEO,
-} from 'components';
+import {ImageGallery,ProductQuantityAdder,SEO,} from 'components';
 import { Price } from './styles';
 import CartContext from 'context/CartContext';
 import { navigate, useLocation } from '@reach/router';
@@ -21,7 +16,7 @@ export const query = graphql`
   }
 `;
 
-export default function ProductTemplate(props, location) {
+export default function ProductTemplate(props) {
   const { getProductById } = React.useContext(CartContext);
   const [product, setProduct] = React.useState(null);
   const [selectedVariant, setSelectedVariant] = React.useState(null);

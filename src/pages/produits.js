@@ -8,7 +8,6 @@ import queryString from 'query-string';
 import { useLocation } from '@reach/router';
 import { Filters } from 'components/Filters';
 
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
 
 
@@ -83,10 +82,8 @@ export default function AllProducts({ location }) {
         <div className="flex flex-col">
           <h2 className=" DancingScript">Produits</h2>
           {!!filteredProducts.length && (
-            <div className="product-list flex-grow ">
 
               <ProductsGrid products={filteredProducts} />
-            </div>
           )}
         </div>
       </section>

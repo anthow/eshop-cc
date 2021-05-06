@@ -9,7 +9,8 @@ export function Filters() {
   {
     allShopifyCollection(
       sort: {fields: title, order: ASC}
-      filter: {products: {elemMatch: {productType: {glob: "Atelier"}}}}
+      filter: {products: {elemMatch: {productType: {glob: "Atelier"}, availableForSale: {eq: true}}}}
+
     ) {
       edges {
         node {

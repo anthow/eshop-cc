@@ -3,11 +3,7 @@ import { StyledLink } from '../StyledLink';
 
 export const ProductTileWrapper = styled.div`
   border: 1px solid #ddd;
-  display: flex;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  overflow: hidden;
-  flex-direction: column;
+
 
   > ${StyledLink} {
     border: 1px solid black;
@@ -23,7 +19,7 @@ export const ProductTileWrapper = styled.div`
 export const Title = styled.div`
   font-weight: bold;
   font-size: 20px;
-  margin: 20px;
+
 `;
 
 export const Description = styled.div`
@@ -34,7 +30,5 @@ export const Description = styled.div`
 
 export const Price = styled.div`
   font-style: italic;
-  padding-left: 20px;
   font-weight: bold;
-  margin-top: auto;
 `;

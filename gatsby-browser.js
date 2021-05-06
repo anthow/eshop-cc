@@ -16,3 +16,16 @@ export const wrapPageElement = ({ element }) => (
     {element}
   </>
 );
+const addScript = url => {
+  const script = document.createElement("script")
+  script.src = url
+  script.async = true
+  document.body.appendChild(script)
+}
+
+export const onClientEntry = () => {
+  window.onload = () => {
+    addScript("https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js")
+    addScript("//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js")
+  }
+}

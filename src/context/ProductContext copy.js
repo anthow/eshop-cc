@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-export const query = graphql`
+const query = graphql`
   fragment ProductTileFields on ShopifyProduct {
     handle
     priceRange {
@@ -11,7 +11,8 @@ export const query = graphql`
     }
   }
   {
-    allShopifyProduct(filter: {productType: {eq: "Atelier"}    }) {
+    allShopifyProduct
+    (skip: 30, limit: 20, sort: {fields: publishedAt, order: DESC} filter: {productType: {eq: "Boutique"},availableForSale: {in: true}}) {
       edges {
       node {
         images {
@@ -70,12 +71,12 @@ export const query = graphql`
       }
     }
   }
-  
-  
+
+
   allShopifyCollection(
     sort: {fields: title, order: ASC}
-    filter: {products: {elemMatch: {productType: {glob: "Atelier"}}}}
-  ) {
+    filter: {products: {elemMatch: {productType: {glob: "Boutique"}, availableForSale: {eq: true}}}}
+    ) {
     edges {
       node {
         products {
@@ -88,9 +89,8 @@ export const query = graphql`
       }
     }
   }
-  }
-  
-    `;
+}
+`;
 
 const defaultState = {
   products: [],

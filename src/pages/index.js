@@ -36,10 +36,8 @@ import {
                 className="  italic block m-auto p-2 text-2xl   text-center atelier rounded-full text-white "
                 name="button"
                 type="button"
-              ><a                 href="#"
               >
                 Bientôt disponible
-                </a>
               </button>
               </div>
               <div className="rowes hidden concept-atelier-background ">
@@ -76,11 +74,10 @@ import {
                 className="  italic block m-auto p-2  w-auto  text-2xl text-center boutique rounded-full text-white w-16"
                 name="button"
                 type="button"
-              ><a href="#"
               >
                                 Bientôt disponible
 
-                </a>
+              
               </button>
               </div>
               <div className=" hidden rowes">

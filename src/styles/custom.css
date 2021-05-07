@@ -86,7 +86,7 @@ body, p{
     color:#707070;
 }
 
-h1,h2, h3{
+h1,h2, h3,h4{
   font-family: 'Dancing Script', cursive;
     color:#4A0D17;
 }
@@ -95,7 +95,13 @@ h3{
   font-family: 'Dancing Script', cursive;
     color:#82b657;
 }
+h4{
+  font-family: 'Dancing Script' !important ;
+}
 
+h6{
+  font-style: italic;
+}
  button,.DancingScript{
   font-family: 'Dancing Script' !important }
 
@@ -138,23 +144,30 @@ h3{
   .concept-boutique{
   background-color:#EEE4E4;
   border-top: solid 7px #ec6726;
-  min-height: 370px;
+  min-height: 450px;
   }
   
   .concept-atelier{
     background-color:#E0D7D7;
     border-top: solid 7px #008492;
-    min-height: 370px;
+    min-height: 450px;
 
   
+  }
+  .contenu-boutique-atelier{
+    min-height: 220px;
+
   }
 
   .concept-atelier-background{
     background-color:#E0D7D7;
  
 
-  
   }
+  .contenu p{
+margin-bottom: 1rem;
+  }
+
   main{
     flex: 1;
     width:100%;
@@ -162,11 +175,9 @@ h3{
   
   button.boutique{
     background-color:#ec6726;
-    width: 100px;
   }
   button.atelier{
     background-color:#008492;
-    width: 100px;
   }
 
   .couleurboutique{
@@ -273,7 +284,7 @@ h3{
         }
 
         .border-categorie{
-          border-bottom: solid 1px black;
+          border-bottom: solid 1px #E0D7D7;
           min-height: auto;
       
         

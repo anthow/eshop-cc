@@ -12,11 +12,13 @@ import {
  const IndexPage = ({ data }) => 
 <Layout>
         <main>
-        <div className="head w-10/12   m-auto mt-10 md: mt-0 py-10 md:max-w-screen-lg">
+        <p className="m-auto mt-14 md:mt-1 border-categorie text-center DancingScript text-xl md:text-2xl"> 
+        le site est en cours de réalisation, merci pour votre compréhension</p>
+        <div className="head w-10/12   m-auto mt-10 md: mt-0 py-10 md:max-w-screeny-lg">
           <img className="mb-10 hidden md:block w-6/6 md:w-4/6 m-auto" alt="accueil" src={data.datoCmsPageDAccueil.imageConcept.url}/>
           <img className="mb-10 md:hidden block w-6/6 md:w-4/6 m-auto" alt="accueil" src={data.datoCmsPageDAccueil.imageConceptSmartphone.url}/>
-          <p className="text-left mb-10">
-            {data.datoCmsPageDAccueil.texteConcept}
+          <p className="text-left  mb-10">
+          <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteConcept }} />
           </p>
         </div>
         <div className="content">
@@ -25,21 +27,22 @@ import {
   
               <div className="concept-atelier  p-10 ">
                 <h2 className=" DancingScript italic font-bold text-4xl text-left mb-5"> Boutique</h2>
-                <p className="p-2 text-left mb-3">
-                {data.datoCmsPageDAccueil.texteBoutique}
+                <p className="p-2 text-left mb-3 contenu-boutique-atelier">
+        
+                <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteBoutique }} />
 
                 </p>
                 <button
-                className="  hover:opacity-80 italic block m-auto p-2 text-2xl  w-auto  text-center atelier rounded-full text-white "
+                className="  italic block m-auto p-2 text-2xl   text-center atelier rounded-full text-white "
                 name="button"
                 type="button"
-              ><a                 href="/all-products"
+              ><a                 href="#"
               >
-                Boutique
+                Bientôt disponible
                 </a>
               </button>
               </div>
-              <div className="rowes concept-atelier-background ">
+              <div className="rowes hidden concept-atelier-background ">
                 <div className="row shadowbottom">
                 <img
                 src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
@@ -65,21 +68,22 @@ import {
                   {" "}
                   Ateliers / Formations{" "}
                 </h2>
-                <p className="p-2 text-left mb-3">
-                {data.datoCmsPageDAccueil.textesAteliers}
+                <p className="p-2 contenu-boutique-atelier text-left mb-3">
+                <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.textesAteliers }} />
 
                 </p>
                 <button
-                className="  hover:opacity-80 italic block m-auto p-2  w-auto  text-2xl text-center boutique rounded-full text-white w-16"
+                className="  italic block m-auto p-2  w-auto  text-2xl text-center boutique rounded-full text-white w-16"
                 name="button"
                 type="button"
-              ><a href="/all-atelier"
+              ><a href="#"
               >
-                Ateliers
+                                Bientôt disponible
+
                 </a>
               </button>
               </div>
-              <div className="rowes">
+              <div className=" hidden rowes">
                 <div className="row shadowbottom">
                 <img
                 src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1" />
@@ -99,11 +103,11 @@ import {
               </div>
             </article>
           </section>
-          <div className="w-11/12  m-auto mt-10 md:mt-0 py-10 md:max-w-screen-lg">
+          <div className="w-11/12  m-auto mt-10 md:mt-0 py-5 md:max-w-screen-lg">
 
-          <h2 className="  italic text-5xl text-left DancingScript   mb-10"> Mes fils rouges</h2>
-          <section className="flex justify-center flex-wrap mb-20">
-            <article className="md:w-1/3 md: mb-0 m-auto w-11/12 mb-3">
+          <h2 className="  italic text-5xl text-left DancingScript mb-10"> Mes fils rouges</h2>
+          <section className="flex flex-wrap m-auto mb-10  items-start">
+            <article className="md:w-1/3 md: mb-0  w-11/12 ">
               <img
                 className="block m-auto md:m-0 mb-3  valeur "
                 src={data.datoCmsPageDAccueil.imagev1.url}  alt="valeur-1"
@@ -114,11 +118,11 @@ import {
 
               </h3>
               <p className="p-2   md:w-9/12  text-center md:text-left text-left mb-10">
-              {data.datoCmsPageDAccueil.textev1}
+              <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.textev1 }} />
 
               </p>
             </article>
-            <article className="md:w-1/3 md: mb-0 m-auto w-11/12 mb-3">
+            <article className="md:w-1/3 md: mb-0  w-11/12 ">
               <img
                 className="block m-auto md:m-0 mb-3  valeur "
                 src={data.datoCmsPageDAccueil.imageV2.url} alt="valeurs"
@@ -128,12 +132,13 @@ import {
 
               </h3>
               <p className="p-2  md:w-9/12  text-center md:text-left text-left mb-10">
-              {data.datoCmsPageDAccueil.texteV2}
+              <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteV2 }} />
+
 
               </p>
             
             </article>
-            <article className="md:w-1/3 md: mb-0 m-auto w-11/12 mb-3">
+            <article className="md:w-1/3 md: mb-0 w-11/12">
               <img
                 className="block m-auto md:m-0 mb-3  valeur "
                 src={data.datoCmsPageDAccueil.imageV3.url} alt="valeur-trois"
@@ -143,7 +148,7 @@ import {
 
               </h3>
               <p className="p-2  md:w-9/12  text-center md:text-left text-left mb-10">
-              {data.datoCmsPageDAccueil.texteV3}
+              <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteV3} } />
 
               </p>
             </article>

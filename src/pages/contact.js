@@ -13,7 +13,7 @@ const ContactPage = ({ data }) => {
         <h2 className=" DancingScript font-bold text-4xl md:text-5xl text-center  mb-10">
           Formulaire de contact
           </h2>
-          <form className="contact-form mb-10 m-auto md:w-6/12  " method="post" action="#">
+          <form className="contact-form mb-10 m-auto md:w-6/12  " method="post" action="https://formspree.io/f/mnqljrwe">
             <div className="form-name items-center flex justify-center flex-col md:flex-row m-auto">
               <label className="block md:mr-5  mb-5 ">
                 <input
@@ -35,7 +35,7 @@ const ContactPage = ({ data }) => {
                 <input
                   className="border p-2"
                   type="email"
-                  name="email"
+                  name="_replyto"
                   id="email"
                   placeholder="Email"
 

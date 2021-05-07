@@ -4,11 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   /* Your site config here */
-  flags: { PRESERVE_WEBPACK_CACHE: true,
-    PARALLEL_SOURCING: true,
-    FAST_DEV:true,
-    DEV_SSR: true,
-   },
+ 
   siteMetadata: {
     title: `Coccinelles et compagnies`,
     description:``,
@@ -94,13 +90,6 @@ module.exports = {
         ],
         display: 'swap'
       },
-    },
-    {
-      resolve: 'gatsby-source-shopify',
-      options: {
-        shopName: 'coccinelles-et-compagnies',
-        accessToken: '47399ff2cad45a9fa0a1d603cf1e8497',
-        apiVersion: '2021-01',     },
     },
     `gatsby-plugin-react-helmet`,
     {

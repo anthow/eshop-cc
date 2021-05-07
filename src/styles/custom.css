@@ -133,6 +133,11 @@ h6{
 
   }
 
+  .buy-atelier
+  {
+    background-color:#ec6726;
+  }
+
   header.headeratelier, footer.footeratelier .bgorange{
     background-color:#ec6726 !important;
 

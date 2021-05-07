@@ -32,13 +32,14 @@ import {
                 <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteBoutique }} />
 
                 </p>
-                <button
-                className="  italic block m-auto p-2 text-2xl   text-center atelier rounded-full text-white "
-                name="button"
-                type="button"
+                <div
+                className=" cursor-default buy-boutique italic block m-auto p-2 text-2xl w-1/3  DancingScript  text-center atelier rounded-full text-white "
+             
               >
+              
                 Bientôt disponible
-              </button>
+              
+              </div>
               </div>
               <div className="rowes hidden concept-atelier-background ">
                 <div className="row shadowbottom">
@@ -70,15 +71,14 @@ import {
                 <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.textesAteliers }} />
 
                 </p>
-                <button
-                className="  italic block m-auto p-2  w-auto  text-2xl text-center boutique rounded-full text-white w-16"
-                name="button"
-                type="button"
+                <div
+                className=" cursor-default buy-atelier italic block m-auto p-2 text-2xl w-1/3  DancingScript  text-center atelier rounded-full text-white "
+             
               >
-                                Bientôt disponible
-
               
-              </button>
+                Bientôt disponible
+              
+              </div>
               </div>
               <div className=" hidden rowes">
                 <div className="row shadowbottom">

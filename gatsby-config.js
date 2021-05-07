@@ -6,11 +6,10 @@ module.exports = {
   /* Your site config here */
  
   siteMetadata: {
-    title: `Coccinelles et compagnies`,
-    description:``,
-    author:`Anthony Englebert`,
-    company:`Avant conseils`,
-    companyWebsite:``,
+    title: "Coccinelles et compagnie",
+    description:"Coccinelles et compagnie, Atelier/boutique",
+    url:"https://coccinellesetcompagnie.com/",
+    image:"atelier-boutique.png",
   },
   plugins: [
     `gatsby-plugin-remove-fingerprints`,

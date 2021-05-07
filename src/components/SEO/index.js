@@ -10,7 +10,7 @@ export function SEO({ description, lang, meta = [], title }) {
           siteMetadata {
             title
             description
-            author
+            
           }
         }
       }

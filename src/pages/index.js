@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from "gatsby"
+import Head from '../components/head'
 import {
   Layout,
   //SEO,
@@ -12,6 +13,7 @@ import {
  const IndexPage = ({ data }) => 
 <Layout>
         <main>
+        <Head />
         <p className="m-auto mt-14 md:mt-1 border-categorie text-center DancingScript text-xl md:text-2xl"> 
         le site est en cours de réalisation, merci pour votre compréhension</p>
         <div className="head w-10/12   m-auto mt-10 md: mt-0 py-10 md:max-w-screeny-lg">
@@ -32,10 +34,7 @@ import {
                 <div className="contenu" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteBoutique }} />
 
                 </p>
-                <div
-                className=" cursor-default buy-boutique italic block m-auto p-2 text-2xl w-1/3  DancingScript  text-center atelier rounded-full text-white "
-             
-              >
+                <div className=" cursor-default buy-boutique italic block m-auto p-2 text-2xl w-1/3  DancingScript  text-center atelier rounded-full text-white ">
               
                 Bientôt disponible
               

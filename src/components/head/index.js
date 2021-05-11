@@ -12,6 +12,6 @@ export default () =>
         <meta property="og:url" content="https://coccinellesetcompagnie.com/" />
         <meta property="og:title" content="Coccinelles et compagnie" />
         <meta property="og:description" content="Coccinelles et compagnie, boutique/ateliers" />
-        <meta property="og:image" content="../images/atelier-boutique.png" />        
+        <meta property="og:image" content="https://res.cloudinary.com/anthow/image/upload/v1620714454/Coccinelles%20et%20compagnies/atelier-boutique-800x800_1_igu2mh.png" />        
     </Helmet>
 

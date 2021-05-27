@@ -36,7 +36,7 @@ import {
                 </p>
                 <div className=" cursor-default buy-boutique italic block m-auto p-2 text-2xl w-1/3  DancingScript  text-center atelier rounded-full text-white ">
               
-                Bientôt disponible
+                L'eshop sera bientôt disponible
               
               </div>
               </div>

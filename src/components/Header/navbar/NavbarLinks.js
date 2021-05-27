@@ -35,7 +35,7 @@ const NavItem = styled(Link)`
     color: black;
   }
 `
-const NavbarLinks = () => {
+  const NavbarLinks = () => {
   return (
     <div className=" menu-vert text-sm font-regular mt-3 md:m-0">
     <NavItem  to="/all-products"
